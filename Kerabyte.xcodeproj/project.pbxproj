@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0C7F04361EEA35B0007C95DD /* Kerabyte.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C7F04341EEA35B0007C95DD /* Kerabyte.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C7F043D1EEA3613007C95DD /* Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F043C1EEA3613007C95DD /* Kerabyte.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C7F04311EEA35B0007C95DD /* Kerabyte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kerabyte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7F04341EEA35B0007C95DD /* Kerabyte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kerabyte.h; sourceTree = "<group>"; };
 		0C7F04351EEA35B0007C95DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C7F043C1EEA3613007C95DD /* Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kerabyte.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +48,9 @@
 		0C7F04331EEA35B0007C95DD /* Kerabyte */ = {
 			isa = PBXGroup;
 			children = (
-				0C7F04341EEA35B0007C95DD /* Kerabyte.h */,
 				0C7F04351EEA35B0007C95DD /* Info.plist */,
+				0C7F04341EEA35B0007C95DD /* Kerabyte.h */,
+				0C7F043C1EEA3613007C95DD /* Kerabyte.swift */,
 			);
 			path = Kerabyte;
 			sourceTree = "<group>";
@@ -96,6 +99,7 @@
 					0C7F04301EEA35B0007C95DD = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 6A7WG7H72G;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7F043D1EEA3613007C95DD /* Kerabyte.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +248,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6A7WG7H72G;
@@ -256,6 +262,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = oscarfuentes.Kerabyte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -264,6 +271,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 6A7WG7H72G;
