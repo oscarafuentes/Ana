@@ -9,13 +9,12 @@
 import Foundation
 import UIKit
 
-open class KBComponent: NSObject {
+open class KBComponent {
     
     public private(set) var template: UIResponder
     
     public init(_ template: UIResponder) {
         self.template = template
-        super.init()
         self.configure()
     }
     
