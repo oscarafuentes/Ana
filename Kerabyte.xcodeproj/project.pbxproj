@@ -13,6 +13,9 @@
 		0C7F04411EEA36DF007C95DD /* KBRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04401EEA36DF007C95DD /* KBRoute.swift */; };
 		0C7F04431EEA36F4007C95DD /* KBRouteConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04421EEA36F4007C95DD /* KBRouteConfiguration.swift */; };
 		0C7F04451EEA3778007C95DD /* KBComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04441EEA3778007C95DD /* KBComponent.swift */; };
+		0C7F04481EEA38F7007C95DD /* UIResponder+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04471EEA38F7007C95DD /* UIResponder+Kerabyte.swift */; };
+		0C7F044A1EEA3A33007C95DD /* KBRoutePredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04491EEA3A33007C95DD /* KBRoutePredefined.swift */; };
+		0C7F044C1EEA3A69007C95DD /* KBObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F044B1EEA3A69007C95DD /* KBObservable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		0C7F04401EEA36DF007C95DD /* KBRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoute.swift; sourceTree = "<group>"; };
 		0C7F04421EEA36F4007C95DD /* KBRouteConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRouteConfiguration.swift; sourceTree = "<group>"; };
 		0C7F04441EEA3778007C95DD /* KBComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBComponent.swift; sourceTree = "<group>"; };
+		0C7F04471EEA38F7007C95DD /* UIResponder+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Kerabyte.swift"; sourceTree = "<group>"; };
+		0C7F04491EEA3A33007C95DD /* KBRoutePredefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoutePredefined.swift; sourceTree = "<group>"; };
+		0C7F044B1EEA3A69007C95DD /* KBObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBObservable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,26 @@
 		0C7F04331EEA35B0007C95DD /* Kerabyte */ = {
 			isa = PBXGroup;
 			children = (
+				0C7F04461EEA38E2007C95DD /* Extensions */,
 				0C7F04351EEA35B0007C95DD /* Info.plist */,
-				0C7F04341EEA35B0007C95DD /* Kerabyte.h */,
-				0C7F043C1EEA3613007C95DD /* Kerabyte.swift */,
-				0C7F043E1EEA36A5007C95DD /* KBRouter.swift */,
+				0C7F04441EEA3778007C95DD /* KBComponent.swift */,
 				0C7F04401EEA36DF007C95DD /* KBRoute.swift */,
 				0C7F04421EEA36F4007C95DD /* KBRouteConfiguration.swift */,
-				0C7F04441EEA3778007C95DD /* KBComponent.swift */,
+				0C7F04491EEA3A33007C95DD /* KBRoutePredefined.swift */,
+				0C7F043E1EEA36A5007C95DD /* KBRouter.swift */,
+				0C7F04341EEA35B0007C95DD /* Kerabyte.h */,
+				0C7F043C1EEA3613007C95DD /* Kerabyte.swift */,
+				0C7F044B1EEA3A69007C95DD /* KBObservable.swift */,
 			);
 			path = Kerabyte;
+			sourceTree = "<group>";
+		};
+		0C7F04461EEA38E2007C95DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C7F04471EEA38F7007C95DD /* UIResponder+Kerabyte.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +166,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7F043D1EEA3613007C95DD /* Kerabyte.swift in Sources */,
+				0C7F04481EEA38F7007C95DD /* UIResponder+Kerabyte.swift in Sources */,
 				0C7F04431EEA36F4007C95DD /* KBRouteConfiguration.swift in Sources */,
 				0C7F04411EEA36DF007C95DD /* KBRoute.swift in Sources */,
+				0C7F044A1EEA3A33007C95DD /* KBRoutePredefined.swift in Sources */,
 				0C7F04451EEA3778007C95DD /* KBComponent.swift in Sources */,
 				0C7F043F1EEA36A5007C95DD /* KBRouter.swift in Sources */,
+				0C7F044C1EEA3A69007C95DD /* KBObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
