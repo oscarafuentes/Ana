@@ -27,6 +27,8 @@
 		0C7F04901EEA41EB007C95DD /* IndexComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */; };
 		0C7F04931EEA4210007C95DD /* IndexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04921EEA4210007C95DD /* IndexTemplate.swift */; };
 		0C7F04951EEA43BD007C95DD /* UIViewController+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */; };
+		0C7F04961EEA447D007C95DD /* Kerabyte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Kerabyte.framework */; };
+		0C7F04971EEA447D007C95DD /* Kerabyte.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Kerabyte.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,28 @@
 			remoteGlobalIDString = 0C7F045C1EEA3F17007C95DD;
 			remoteInfo = Example;
 		};
+		0C7F04981EEA447D007C95DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C7F04281EEA35B0007C95DD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C7F04301EEA35B0007C95DD;
+			remoteInfo = Kerabyte;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C7F049A1EEA447D007C95DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C7F04971EEA447D007C95DD /* Kerabyte.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C7F04311EEA35B0007C95DD /* Kerabyte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kerabyte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7F04961EEA447D007C95DD /* Kerabyte.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +278,12 @@
 				0C7F04591EEA3F17007C95DD /* Sources */,
 				0C7F045A1EEA3F17007C95DD /* Frameworks */,
 				0C7F045B1EEA3F17007C95DD /* Resources */,
+				0C7F049A1EEA447D007C95DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C7F04991EEA447D007C95DD /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -448,6 +474,11 @@
 			target = 0C7F045C1EEA3F17007C95DD /* Example */;
 			targetProxy = 0C7F047C1EEA3F18007C95DD /* PBXContainerItemProxy */;
 		};
+		0C7F04991EEA447D007C95DD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C7F04301EEA35B0007C95DD /* Kerabyte */;
+			targetProxy = 0C7F04981EEA447D007C95DD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -619,6 +650,7 @@
 		0C7F04821EEA3F18007C95DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6A7WG7H72G;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -632,6 +664,7 @@
 		0C7F04831EEA3F18007C95DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6A7WG7H72G;
 				INFOPLIST_FILE = Example/Info.plist;
