@@ -10,5 +10,11 @@ import Foundation
 import UIKit
 
 public class IndexTemplate: UIViewController {
-
+    
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.red
+    }
+    
 }

@@ -157,15 +157,15 @@
 		0C7F045E1EEA3F17007C95DD /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				0C7F04911EEA4208007C95DD /* Templates */,
 				0C7F048E1EEA41E2007C95DD /* Components */,
 				0C7F048B1EEA41AB007C95DD /* Routes */,
+				0C7F04911EEA4208007C95DD /* Templates */,
 				0C7F045F1EEA3F17007C95DD /* AppDelegate.swift */,
-				0C7F04611EEA3F17007C95DD /* ViewController.swift */,
-				0C7F04631EEA3F17007C95DD /* Main.storyboard */,
 				0C7F04661EEA3F17007C95DD /* Assets.xcassets */,
-				0C7F04681EEA3F17007C95DD /* LaunchScreen.storyboard */,
 				0C7F046B1EEA3F17007C95DD /* Info.plist */,
+				0C7F04681EEA3F17007C95DD /* LaunchScreen.storyboard */,
+				0C7F04631EEA3F17007C95DD /* Main.storyboard */,
+				0C7F04611EEA3F17007C95DD /* ViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
