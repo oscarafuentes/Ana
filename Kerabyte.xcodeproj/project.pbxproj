@@ -26,6 +26,7 @@
 		0C7F048D1EEA41B6007C95DD /* IndexRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */; };
 		0C7F04901EEA41EB007C95DD /* IndexComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */; };
 		0C7F04931EEA4210007C95DD /* IndexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04921EEA4210007C95DD /* IndexTemplate.swift */; };
+		0C7F04951EEA43BD007C95DD /* UIViewController+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexRoute.swift; sourceTree = "<group>"; };
 		0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexComponent.swift; sourceTree = "<group>"; };
 		0C7F04921EEA4210007C95DD /* IndexTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTemplate.swift; sourceTree = "<group>"; };
+		0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Kerabyte.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				0C7F04471EEA38F7007C95DD /* UIResponder+Kerabyte.swift */,
+				0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				0C7F044A1EEA3A33007C95DD /* KBRoutePredefined.swift in Sources */,
 				0C7F04451EEA3778007C95DD /* KBComponent.swift in Sources */,
 				0C7F043F1EEA36A5007C95DD /* KBRouter.swift in Sources */,
+				0C7F04951EEA43BD007C95DD /* UIViewController+Kerabyte.swift in Sources */,
 				0C7F044C1EEA3A69007C95DD /* KBObservable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,7 +574,7 @@
 		0C7F043A1EEA35B0007C95DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -593,7 +597,7 @@
 		0C7F043B1EEA35B0007C95DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
