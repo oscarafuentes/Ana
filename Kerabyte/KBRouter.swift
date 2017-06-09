@@ -8,13 +8,13 @@
 
 import Foundation
 
-open class KBRouter {
+open class KBRouter<T: KBRoute> {
     
-    public private(set) var route: KBRoute
+//    public private(set) var route: KBRoute
     public private(set) var domains: [String]
     
-    public init(_ route: KBRoute, domains: [String] = []) {
-        self.route = route
+    public init(_ domains: [String] = []) {
+//        self.route = route
         self.domains = domains
     }
     

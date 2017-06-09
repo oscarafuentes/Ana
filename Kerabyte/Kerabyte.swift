@@ -20,13 +20,13 @@ public final class Kerabyte {
      The active route.
      */
     
-    public let url = KBObservable<URL?>(nil)
+    public let url = KBObservable<URL>(URL(string: "/")!)
     
     /**
      The router which manages this application.
      */
     
-    private var router: KBRouter?
+    private var router: KBRouter<KBRoute>?
     
     /**
      The stack of active route responders.
@@ -56,14 +56,10 @@ public final class Kerabyte {
      - Parameter router: The router which manages this application.
      */
     
-    public static func register(_ router: KBRouter, url: URL? = nil) {
+    public static func register(_ router: KBRouter<KBRoute>, url: URL = URL(string: "/")!) {
         shared.router = router
         
-        if let url = url {
-            dispatch(url)
-        } else if let url = URL(string: "/") {
-            dispatch(url)
-        }
+        dispatch(url)
     }
     
     /**
@@ -83,45 +79,53 @@ public final class Kerabyte {
             absoluteString = absoluteString.replacingOccurrences(of: domain, with: "")
         }
         
-        guard let path = URL(string: absoluteString) else {
+        guard let next = URL(string: absoluteString) else {
             return
         }
         
-        guard let template = shared.generate(path.pathComponents, route: router.route) else {
-            return
-        }
+        let active = shared.url.value
         
-        var outlet: UIResponder? = template
         
-        var outletStack: [UIResponder] = []
-        while let responder = outlet {
-            outletStack.append(responder)
-            outlet = responder.outlet
-        }
         
-        let toRemove = shared.responderStack.filter { responder -> Bool in
-            return outletStack.index(of: responder) == nil
-        }
-        
-        let toAdd = outletStack.filter { responder -> Bool in
-            return shared.responderStack.index(of: responder) == nil
-        }
-        
-        shared.responderStack = shared.responderStack.filter { responder -> Bool in
-            return toRemove.index(of: responder) == nil
-        }
-        
-        let parent = shared.responderStack.last
-        
-        shared.responderStack.append(contentsOf: toAdd)
-        
-        shared.leave(toRemove) {
-            shared.enter(toAdd, parent: parent)
-        }
-        
-        shared.url.value = url
-        shared.activeResponder = shared.responderStack.last
-        shared.historyStack.append(url)
+//        guard let path = URL(string: absoluteString) else {
+//            return
+//        }
+//        
+//        guard let template = shared.generate(path.pathComponents, route: router.route) else {
+//            return
+//        }
+//        
+//        var outlet: UIResponder? = template
+//        
+//        var outletStack: [UIResponder] = []
+//        while let responder = outlet {
+//            outletStack.append(responder)
+//            outlet = responder.outlet
+//        }
+//        
+//        let toRemove = shared.responderStack.filter { responder -> Bool in
+//            return outletStack.index(of: responder) == nil
+//        }
+//        
+//        let toAdd = outletStack.filter { responder -> Bool in
+//            return shared.responderStack.index(of: responder) == nil
+//        }
+//        
+//        shared.responderStack = shared.responderStack.filter { responder -> Bool in
+//            return toRemove.index(of: responder) == nil
+//        }
+//        
+//        let parent = shared.responderStack.last
+//        
+//        shared.responderStack.append(contentsOf: toAdd)
+//        
+//        shared.leave(toRemove) {
+//            shared.enter(toAdd, parent: parent)
+//        }
+//        
+//        shared.url.value = url
+//        shared.activeResponder = shared.responderStack.last
+//        shared.historyStack.append(url)
     }
     
     private func enter(_ responders: [UIResponder], parent: UIResponder?, completion: (() -> Void)? = nil) {
@@ -240,19 +244,6 @@ public final class Kerabyte {
         returnValue?.outlet = subTemplate
         
         return returnValue
-    }
-    
-    /**
-     Traverses back one-level in the historical hierarchy of URLs.
-     */
-    
-    public static func onBack() {
-        let count = shared.historyStack.count
-        
-        if count > 2 {
-            let previous = shared.historyStack[count-2]
-            Kerabyte.dispatch(previous)
-        }
     }
     
 }
