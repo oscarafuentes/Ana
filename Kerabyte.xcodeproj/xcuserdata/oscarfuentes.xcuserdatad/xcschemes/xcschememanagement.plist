@@ -4,15 +4,40 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Example.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Kerabyte.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>KerabyteUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0C7F04301EEA35B0007C95DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C7F045C1EEA3F17007C95DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C7F046F1EEA3F17007C95DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C7F047A1EEA3F17007C95DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
