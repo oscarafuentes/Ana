@@ -9,18 +9,14 @@
 import Foundation
 import UIKit
 
-open class KBComponent {
-    
-    public private(set) var template: UIResponder
-    
-    public init(_ template: UIResponder) {
-        self.template = template
-        self.configure()
-    }
+open class KBComponent: NSObject {
     
     open func configure() {
-        self.template.component = self
-        self.template.onInit()
+        
+    }
+    
+    public func template() -> UIResponder {
+        return UIResponder()
     }
     
     /**

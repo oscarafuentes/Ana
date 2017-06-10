@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class KBRouter<T: KBRoute> {
+open class KBRouter {
     
     public private(set) var route: KBRoute
     public private(set) var domains: [String]

@@ -12,9 +12,7 @@ import Kerabyte
 public class IndexRoute: KBRoute {
     
     public init() {
-        super.init(KBRouteConfiguration(
-            component: IndexComponent()
-        ))
+        super.init(KBRouteConfiguration<IndexComponent>())
     }
     
 }
