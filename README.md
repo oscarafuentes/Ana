@@ -146,6 +146,8 @@ public class IndexTemplate: UIViewController {
 }
 ```
 
+An example is included in this repository for convenience.
+
 ## Documentation
 
 ### Kerabyte
@@ -167,6 +169,13 @@ public class IndexTemplate: UIViewController {
     * Parameter `domains`: The domains that should be handled (defaults to []).
 
 ### KBRoute
+
+#### Initializers
+
+* `init(_ path: String, match: Bool, subRoutes: [KBRoute])`
+    * Parameter `path`: Route path (defaults to nil).
+    * Parameter `match`: Specifies the matching scheme (defaults to true).
+    * Parameter `subRoutes`: Child routes available under this route (defaults to []).
 
 #### Instance Functions
 
