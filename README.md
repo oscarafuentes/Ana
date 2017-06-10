@@ -160,9 +160,30 @@ public class IndexTemplate: UIViewController {
 
 ### KBRouter
 
+#### Initializers
+
+* `init(_ route: KBRoute, domains: [String])`
+    * Parameter `route`: The base route.
+    * Parameter `domains`: The domains that should be handled (defaults to []).
+
 ### KBRoute
 
+#### Instance Functions
+
+* `generateComponent() -> KBComponent` - Creates a component object linked to this route.
+    * Returns: A `KBComponent` to link with this route.
+
 ### KBComponent
+
+#### Instance Functions
+
+* `generateTemplate() -> UIResponder` - Creates an interface object linked to this component.
+    * Returns: A `UIResponder` to link with this component.
+
+#### Lifecycle Hooks
+
+* `onInit()` - Post-initialization function to avoid constructor logic.
+* `onDestroy()` - Pre-destruction function to cleanup resources.
 
 ## Versioning
 
