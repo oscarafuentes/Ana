@@ -21,7 +21,7 @@ open class KBRoute: NSObject {
         super.init()
     }
     
-    public func component() -> KBComponent {
+    open func generateComponent() -> KBComponent {
         return KBComponent()
     }
     

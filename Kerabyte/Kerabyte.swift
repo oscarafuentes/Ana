@@ -29,22 +29,28 @@ public final class Kerabyte {
     private var router: KBRouter?
     
     /**
-     The stack of active route responders.
+     The stack of active routes.
      */
     
-    private var responderStack: [UIResponder]  = []
+    private var routeStack: [KBRoute] = []
     
     /**
-     The active responder.
+     The stack of active route components.
      */
     
-    private var activeResponder: UIResponder? {
+    private var componentStack: [KBComponent] = []
+    
+    /**
+     The active route.
+     */
+    
+    private var activeRoute: KBRoute? {
         willSet {
-            self.activeResponder?.active = false
+//            self.activeRoute?.active = false
         }
         
         didSet {
-            self.activeResponder?.active = true
+//            self.activeRoute?.active = true
         }
     }
     
@@ -83,11 +89,34 @@ public final class Kerabyte {
             return
         }
         
-        guard let routes = shared.generate(path.pathComponents, route: router.route) else {
+        guard let routeStack = shared.generate(path.pathComponents, route: router.route) else {
             return
         }
         
-        print(routes)
+        let toRemove = shared.routeStack.filter { route -> Bool in
+            return routeStack.index(of: route) == nil
+        }
+        
+        let toAdd = routeStack.filter { route -> Bool in
+            return shared.routeStack.index(of: route) == nil
+        }
+        
+        shared.routeStack = shared.routeStack.filter { route -> Bool in
+            return toRemove.index(of: route) == nil
+        }
+        
+        let parent = shared.routeStack.last
+        let parentTemplate = parent?.generateComponent().generateTemplate()
+        
+        shared.routeStack.append(contentsOf: toAdd)
+        
+        shared.leave(toRemove) {
+            shared.enter(toAdd, parent: parentTemplate)
+        }
+        
+        shared.url.value = url
+        shared.activeRoute = shared.routeStack.last
+        shared.historyStack.append(url)
     }
     
     /**
@@ -170,31 +199,36 @@ public final class Kerabyte {
         return returnValue
     }
     
-    private func enter(_ responders: [UIResponder], parent: UIResponder?, completion: (() -> Void)? = nil) {
-        guard let first = responders.first else {
+    private func enter(_ routes: [KBRoute], parent: UIResponder?, completion: (() -> Void)? = nil) {
+        guard let first = routes.first else {
             completion?()
             return
         }
         
-        first.component?.onInit()
+        let component = first.generateComponent()
+        component.template.onInit()
         
-        first.enter(parent: parent) {
-            var duplicate = responders
+        component.template.enter(parent: parent) {
+            var duplicate = routes
             let subParent = duplicate.removeFirst()
-            self.enter(duplicate, parent: subParent, completion: completion)
+            let subParentTemplate = subParent.generateComponent().generateTemplate()
+            self.enter(duplicate, parent: subParentTemplate, completion: completion)
         }
+        
+        self.componentStack.append(component)
     }
     
-    private func leave(_ responders: [UIResponder], completion: (() -> Void)? = nil) {
-        guard let last = responders.last else {
+    private func leave(_ routes: [KBRoute], completion: (() -> Void)? = nil) {
+        if routes.last == nil {
             completion?()
             return
         }
         
-        last.component?.onDestroy()
+        let component = self.componentStack.removeLast()
+        component.onDestroy()
         
-        last.leave {
-            var duplicate = responders
+        component.template.leave {
+            var duplicate = routes
             duplicate.removeLast()
             self.leave(duplicate, completion: completion)
         }

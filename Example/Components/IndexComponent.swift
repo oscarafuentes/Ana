@@ -11,8 +11,8 @@ import Kerabyte
 
 public class IndexComponent: KBComponent {
     
-    public init() {
-        super.init(IndexTemplate())
+    public override func generateTemplate() -> UIResponder {
+        return IndexTemplate()
     }
     
 }

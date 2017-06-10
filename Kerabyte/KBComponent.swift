@@ -11,11 +11,18 @@ import UIKit
 
 open class KBComponent: NSObject {
     
+    public private(set) var template: UIResponder!
+    
+    public override init() {
+        super.init()
+        self.template = self.generateTemplate()
+    }
+    
     open func configure() {
         
     }
     
-    public func template() -> UIResponder {
+    open func generateTemplate() -> UIResponder {
         return UIResponder()
     }
     
