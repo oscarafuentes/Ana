@@ -1,30 +1,30 @@
 //
 //  IndexComponent.swift
-//  Kerabyte
+//  Ana
 //
 //  Created by Oscar Fuentes on 6/8/17.
 //  Copyright © 2017 Oscar Fuentes. All rights reserved.
 //
 
 import Foundation
-import Kerabyte
+import Ana
 
-public class IndexComponent: KBComponent {
+public class IndexComponent: AComponent {
     
     public override func generateTemplate() -> UIResponder {
         return IndexTemplate()
     }
     
     public func onRouteAbout() {
-        Kerabyte.dispatch(URL(string: "/about")!)
+        Ana.dispatch(URL(string: "/about")!)
     }
     
     public func onRoutePrivacyPolicy() {
-        Kerabyte.dispatch(URL(string: "/privacy-policy")!)
+        Ana.dispatch(URL(string: "/privacy-policy")!)
     }
     
     public func onRouteTermsOfUse() {
-        Kerabyte.dispatch(URL(string: "/terms-of-use")!)
+        Ana.dispatch(URL(string: "/terms-of-use")!)
     }
     
 }

@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import Kerabyte
+import Ana
 
-public class IndexRoute: KBRoute {
+public class IndexRoute: ARoute {
     
     public init() {
         super.init(
@@ -22,7 +22,7 @@ public class IndexRoute: KBRoute {
             ])
     }
     
-    public override func generateComponent() -> KBComponent {
+    public override func generateComponent() -> AComponent {
         return IndexComponent()
     }
     
