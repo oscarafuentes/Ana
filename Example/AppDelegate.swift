@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let router = KBRouter(IndexRoute())
         
         Kerabyte.register(router)
-                
+        
         return true
     }
 
