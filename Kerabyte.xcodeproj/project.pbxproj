@@ -233,6 +233,7 @@
 		0C7F04911EEA4208007C95DD /* Templates */ = {
 			isa = PBXGroup;
 			children = (
+				0C8BDA7B1EEBA78200CE613A /* Public */,
 				0C8BDA761EEBA53700CE613A /* Index */,
 			);
 			path = Templates;
@@ -245,6 +246,37 @@
 				0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */,
 			);
 			path = Index;
+			sourceTree = "<group>";
+		};
+		0C8BDA7B1EEBA78200CE613A /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA7C1EEBA78200CE613A /* About */,
+				0C8BDA7D1EEBA78200CE613A /* PrivacyPolicy */,
+				0C8BDA7E1EEBA78200CE613A /* TermsOfUse */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		0C8BDA7C1EEBA78200CE613A /* About */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		0C8BDA7D1EEBA78200CE613A /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PrivacyPolicy;
+			sourceTree = "<group>";
+		};
+		0C8BDA7E1EEBA78200CE613A /* TermsOfUse */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TermsOfUse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
