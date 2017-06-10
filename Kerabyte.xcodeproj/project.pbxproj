@@ -41,6 +41,7 @@
 		0C8BDA961EEC2C3000CE613A /* AboutRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA951EEC2C3000CE613A /* AboutRoute.swift */; };
 		0C8BDA981EEC2C3A00CE613A /* PrivacyPolicyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */; };
 		0C8BDA9A1EEC2C4300CE613A /* TermsOfUseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */; };
+		0C8BDA9D1EEC4DC100CE613A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA9C1EEC4DC100CE613A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		0C8BDA951EEC2C3000CE613A /* AboutRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRoute.swift; sourceTree = "<group>"; };
 		0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyRoute.swift; sourceTree = "<group>"; };
 		0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseRoute.swift; sourceTree = "<group>"; };
+		0C8BDA9C1EEC4DC100CE613A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		0C7F04271EEA35B0007C95DD = {
 			isa = PBXGroup;
 			children = (
+				0C8BDA9B1EEC4DB600CE613A /* Meta */,
 				0C7F04331EEA35B0007C95DD /* Kerabyte */,
 				0C7F045E1EEA3F17007C95DD /* Example */,
 				0C7F04731EEA3F17007C95DD /* ExampleTests */,
@@ -329,6 +332,14 @@
 				0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */,
 			);
 			path = Public;
+			sourceTree = "<group>";
+		};
+		0C8BDA9B1EEC4DB600CE613A /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA9C1EEC4DC100CE613A /* README.md */,
+			);
+			name = Meta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +555,7 @@
 				0C8BDA781EEBA53700CE613A /* IndexTemplate.swift in Sources */,
 				0C8BDA981EEC2C3A00CE613A /* PrivacyPolicyRoute.swift in Sources */,
 				0C8BDA941EEC2C1B00CE613A /* TermsOfUseComponent.swift in Sources */,
+				0C8BDA9D1EEC4DC100CE613A /* README.md in Sources */,
 				0C8BDA841EEC2B1C00CE613A /* PrivacyPolicyTemplate.swift in Sources */,
 				0C7F048D1EEA41B6007C95DD /* IndexRoute.swift in Sources */,
 			);
