@@ -6,6 +6,7 @@
 	* Introduction
 	* Requirements
 	* Installation
+	* Usage
 * Versioning
 * Maintainers
 * License
@@ -25,6 +26,27 @@ A minimum deployment target of iOS 10.0 is required to integrate this module.
 - **Integrate as a sub-project**
 
 	Drag the . xcodeproj file into your workspace.
+
+### Usage
+
+```swift
+import UIKit
+import Kerabyte
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {        
+        let router = KBRouter(IndexRoute())
+
+        Kerabyte.register(router)
+
+        return true
+    }
+}
+```
 
 ## Versioning
 
