@@ -106,7 +106,6 @@ public final class Kerabyte {
             return toRemove.index(of: route) == nil
         }
         
-        let parent = shared.routeStack.last
         let parentTemplate = shared.componentStack.last?.template
         
         shared.routeStack.append(contentsOf: toAdd)
