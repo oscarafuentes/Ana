@@ -106,7 +106,7 @@ public final class Kerabyte {
         }
         
         let parent = shared.routeStack.last
-        let parentTemplate = parent?.generateComponent().generateTemplate()
+        let parentTemplate = shared.componentStack.last?.template
         
         shared.routeStack.append(contentsOf: toAdd)
         
@@ -210,8 +210,9 @@ public final class Kerabyte {
         
         component.template.enter(parent: parent) {
             var duplicate = routes
-            let subParent = duplicate.removeFirst()
-            let subParentTemplate = subParent.generateComponent().generateTemplate()
+            duplicate.removeFirst()
+            let subParentTemplate = self.componentStack.last?.template
+            
             self.enter(duplicate, parent: subParentTemplate, completion: completion)
         }
         
