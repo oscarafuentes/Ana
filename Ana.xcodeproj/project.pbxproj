@@ -41,7 +41,6 @@
 		0CE838F21EECB3BE0054A268 /* KBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E81EECB3BE0054A268 /* KBRouter.swift */; };
 		0CE838F31EECB3BE0054A268 /* Kerabyte.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CE838E91EECB3BE0054A268 /* Kerabyte.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0CE838F41EECB3BE0054A268 /* Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838EA1EECB3BE0054A268 /* Kerabyte.swift */; };
-		0CE838F51EECB3DE0054A268 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0CE838E31EECB3BE0054A268 /* Info.plist */; };
 		0CE838F61EECB49C0054A268 /* Ana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Ana.framework */; };
 		0CE838F71EECB49C0054A268 /* Ana.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Ana.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -494,7 +493,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE838F51EECB3DE0054A268 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
