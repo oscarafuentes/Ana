@@ -1,6 +1,6 @@
 //
-//  Kerabyte.swift
-//  Kerabyte
+//  Ana.swift
+//  Ana
 //
 //  Created by Oscar Fuentes on 6/8/17.
 //  Copyright © 2017 Oscar Fuentes. All rights reserved.
@@ -9,43 +9,43 @@
 import Foundation
 import UIKit
 
-public final class Kerabyte {
+public final class Ana {
     
     /**
      Privately shared instance of top-level module class.
      */
     
-    public static let shared = Kerabyte()
+    public static let shared = Ana()
     
     /**
      The active route.
      */
     
-    public let url = KBObservable<URL>(URL(string: "/")!)
+    public let url = AObservable<URL>(URL(string: "/")!)
     
     /**
      The router which manages this application.
      */
     
-    private var router: KBRouter?
+    private var router: ARouter?
     
     /**
      The stack of active routes.
      */
     
-    private var routeStack: [KBRoute] = []
+    private var routeStack: [ARoute] = []
     
     /**
      The stack of active route components.
      */
     
-    private var componentStack: [KBComponent] = []
+    private var componentStack: [AComponent] = []
     
     /**
      The active route.
      */
     
-    private var activeRoute: KBRoute? {
+    private var activeRoute: ARoute? {
         willSet {
 //            self.activeRoute?.active = false
         }
@@ -63,7 +63,7 @@ public final class Kerabyte {
      - Parameter router: The router which manages this application.
      */
     
-    public static func register(_ router: KBRouter, url: URL = URL(string: "/")!) {
+    public static func register(_ router: ARouter, url: URL = URL(string: "/")!) {
         shared.router = router
         
         dispatch(url)
@@ -127,9 +127,9 @@ public final class Kerabyte {
      */
     
     
-    private func generate(_ components: [String], route: KBRoute) -> [KBRoute]? {
-        var returnValue: [KBRoute]?
-        var childRoutes: [KBRoute]?
+    private func generate(_ components: [String], route: ARoute) -> [ARoute]? {
+        var returnValue: [ARoute]?
+        var childRoutes: [ARoute]?
         
         var duplicate = components.map { component -> String in
             return component.replacingOccurrences(of: "/", with: "")
@@ -145,7 +145,7 @@ public final class Kerabyte {
         let routePath   = path?.replacingOccurrences(of: "/", with: "")
         
         if let routePath = routePath, duplicate.count > 0 {
-            if routePath == KBRoutePredefined.root.rawValue || routePath == KBRoutePredefined.wildcard.rawValue {
+            if routePath == ARoutePredefined.root.rawValue || routePath == ARoutePredefined.wildcard.rawValue {
                 returnValue = [route]
             } else if routePath == duplicate[0] {
                 returnValue = [route]
@@ -165,7 +165,7 @@ public final class Kerabyte {
                 }
             }
         } else if let routePath = routePath {
-            if routePath == KBRoutePredefined.root.rawValue || routePath == KBRoutePredefined.wildcard.rawValue {
+            if routePath == ARoutePredefined.root.rawValue || routePath == ARoutePredefined.wildcard.rawValue {
                 returnValue = [route]
             }
         } else {
@@ -181,7 +181,7 @@ public final class Kerabyte {
                         }
                     }
                     
-                    if subRoutePath == KBRoutePredefined.root.rawValue || subRoutePath == KBRoutePredefined.wildcard.rawValue {
+                    if subRoutePath == ARoutePredefined.root.rawValue || subRoutePath == ARoutePredefined.wildcard.rawValue {
                         childRoutes = self.generate(duplicate, route: subRoute)
                     }
                     
@@ -199,7 +199,7 @@ public final class Kerabyte {
         return returnValue
     }
     
-    private func enter(_ routes: [KBRoute], parent: UIResponder?, completion: (() -> Void)? = nil) {
+    private func enter(_ routes: [ARoute], parent: UIResponder?, completion: (() -> Void)? = nil) {
         guard let first = routes.first else {
             completion?()
             return
@@ -219,7 +219,7 @@ public final class Kerabyte {
         self.componentStack.append(component)
     }
     
-    private func leave(_ routes: [KBRoute], completion: (() -> Void)? = nil) {
+    private func leave(_ routes: [ARoute], completion: (() -> Void)? = nil) {
         if routes.last == nil {
             completion?()
             return
