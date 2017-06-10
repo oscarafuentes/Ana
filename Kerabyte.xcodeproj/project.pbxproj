@@ -42,6 +42,7 @@
 		0C8BDA981EEC2C3A00CE613A /* PrivacyPolicyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */; };
 		0C8BDA9A1EEC2C4300CE613A /* TermsOfUseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */; };
 		0C8BDA9D1EEC4DC100CE613A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA9C1EEC4DC100CE613A /* README.md */; };
+		0CE838DE1EEC55170054A268 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838DD1EEC55170054A268 /* LICENSE.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyRoute.swift; sourceTree = "<group>"; };
 		0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseRoute.swift; sourceTree = "<group>"; };
 		0C8BDA9C1EEC4DC100CE613A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0CE838DD1EEC55170054A268 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 		0C8BDA9B1EEC4DB600CE613A /* Meta */ = {
 			isa = PBXGroup;
 			children = (
+				0CE838DD1EEC55170054A268 /* LICENSE.md */,
 				0C8BDA9C1EEC4DC100CE613A /* README.md */,
 			);
 			name = Meta;
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7F043D1EEA3613007C95DD /* Kerabyte.swift in Sources */,
+				0CE838DE1EEC55170054A268 /* LICENSE.md in Sources */,
 				0C7F04481EEA38F7007C95DD /* UIResponder+Kerabyte.swift in Sources */,
 				0C7F04411EEA36DF007C95DD /* KBRoute.swift in Sources */,
 				0C7F044A1EEA3A33007C95DD /* KBRoutePredefined.swift in Sources */,
