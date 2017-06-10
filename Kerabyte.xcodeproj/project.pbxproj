@@ -24,10 +24,11 @@
 		0C7F04801EEA3F18007C95DD /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F047F1EEA3F18007C95DD /* ExampleUITests.swift */; };
 		0C7F048D1EEA41B6007C95DD /* IndexRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */; };
 		0C7F04901EEA41EB007C95DD /* IndexComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */; };
-		0C7F04931EEA4210007C95DD /* IndexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04921EEA4210007C95DD /* IndexTemplate.swift */; };
 		0C7F04951EEA43BD007C95DD /* UIViewController+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */; };
 		0C7F04961EEA447D007C95DD /* Kerabyte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Kerabyte.framework */; };
 		0C7F04971EEA447D007C95DD /* Kerabyte.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Kerabyte.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C8BDA781EEBA53700CE613A /* IndexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA771EEBA53700CE613A /* IndexTemplate.swift */; };
+		0C8BDA7A1EEBA63900CE613A /* IndexTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,8 +95,9 @@
 		0C7F04811EEA3F18007C95DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexRoute.swift; sourceTree = "<group>"; };
 		0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexComponent.swift; sourceTree = "<group>"; };
-		0C7F04921EEA4210007C95DD /* IndexTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTemplate.swift; sourceTree = "<group>"; };
 		0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Kerabyte.swift"; sourceTree = "<group>"; };
+		0C8BDA771EEBA53700CE613A /* IndexTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTemplate.swift; sourceTree = "<group>"; };
+		0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexTemplate.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,9 +233,18 @@
 		0C7F04911EEA4208007C95DD /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				0C7F04921EEA4210007C95DD /* IndexTemplate.swift */,
+				0C8BDA761EEBA53700CE613A /* Index */,
 			);
 			path = Templates;
+			sourceTree = "<group>";
+		};
+		0C8BDA761EEBA53700CE613A /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA771EEBA53700CE613A /* IndexTemplate.swift */,
+				0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */,
+			);
+			path = Index;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +404,7 @@
 			files = (
 				0C7F046A1EEA3F17007C95DD /* LaunchScreen.storyboard in Resources */,
 				0C7F04671EEA3F17007C95DD /* Assets.xcassets in Resources */,
+				0C8BDA7A1EEBA63900CE613A /* IndexTemplate.xib in Resources */,
 				0C7F04651EEA3F17007C95DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,7 +448,7 @@
 				0C7F04621EEA3F17007C95DD /* ViewController.swift in Sources */,
 				0C7F04601EEA3F17007C95DD /* AppDelegate.swift in Sources */,
 				0C7F04901EEA41EB007C95DD /* IndexComponent.swift in Sources */,
-				0C7F04931EEA4210007C95DD /* IndexTemplate.swift in Sources */,
+				0C8BDA781EEBA53700CE613A /* IndexTemplate.swift in Sources */,
 				0C7F048D1EEA41B6007C95DD /* IndexRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
