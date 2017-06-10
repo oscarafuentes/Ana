@@ -33,8 +33,6 @@ public class IndexTemplate: UIViewController {
         default:
             break
         }
-        
-        
     }
     
 }

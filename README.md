@@ -7,6 +7,7 @@
 	* Requirements
 	* Installation
 	* Usage
+* Documentation
 * Versioning
 * Maintainers
 * License
@@ -15,7 +16,9 @@
 
 ### Introduction
 
-This module provides a routing solution for deploying path-oriented iOS applications written in Swift.
+This module provides a routing solution for deploying path-oriented iOS 
+applications written in Swift. It conforms to the Clean VIPER Architecture in
+order to simplify application development.
 
 ### Requirements
 
@@ -28,6 +31,9 @@ A minimum deployment target of iOS 10.0 is required to integrate this module.
 	Drag the . xcodeproj file into your workspace.
 
 ### Usage
+
+To configure your application, you must register an instance of `KBRouter` with 
+a given `KBRoute`.
 
 ```swift
 import UIKit
@@ -47,6 +53,108 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 ```
+
+In this scenario, `IndexRoute` subclasses `KBRoute` to act as a wildcard route.
+
+```swift
+import Foundation
+import Kerabyte
+
+public class IndexRoute: KBRoute {
+
+    public init() {
+        super.init(
+            nil,
+            match: false,
+            subRoutes: [
+                AboutRoute(),
+                PrivacyPolicyRoute(),
+                TermsOfUseRoute()
+            ])
+    }
+
+    public override func generateComponent() -> KBComponent {
+        return IndexComponent()
+    }
+
+}
+```
+
+`IndexComponent` subclasses `KBComponent` to act as the delegate between 
+all business logic and the user-facing interface. It supplies a template 
+(UIResponder) via the `generateTemplate` function for runtime-based interfaces.
+
+```swift
+import Foundation
+import Kerabyte
+
+public class IndexComponent: KBComponent {
+
+    public override func generateTemplate() -> UIResponder {
+        return IndexTemplate()
+    }
+
+    public func onRouteAbout() {
+        Kerabyte.dispatch(URL(string: "/about")!)
+    }
+
+    public func onRoutePrivacyPolicy() {
+        Kerabyte.dispatch(URL(string: "/privacy-policy")!)
+    }
+
+    public func onRouteTermsOfUse() {
+        Kerabyte.dispatch(URL(string: "/terms-of-use")!)
+    }
+
+}
+```
+
+The power of templates lies in the ability to delegate logic to their respective
+components, which in turn can transition to different routes without 
+compromising performance or memory usage.
+
+```swift
+import Foundation
+import UIKit
+
+public class IndexTemplate: UIViewController {
+
+    @IBOutlet weak var aboutButton: UIButton!
+    @IBOutlet weak var privacyPolicyButton: UIButton!
+    @IBOutlet weak var termsOfUseButton: UIButton!
+
+    @IBAction func onTapPublic(_ sender: UIButton) {
+        guard let responder = self.component as? IndexComponent else {
+            return
+        }
+
+        switch sender {
+        case self.aboutButton:
+            responder.onRouteAbout()
+            break
+        case self.privacyPolicyButton:
+            responder.onRoutePrivacyPolicy()
+            break
+        case self.termsOfUseButton:
+            responder.onRouteTermsOfUse()
+            break
+        default:
+            break
+        }
+    }
+
+}
+```
+
+## Documentation
+
+### `Kerabyte`
+
+### `KBRouter`
+
+### `KBRoute`
+
+### `KBComponent`
 
 ## Versioning
 
