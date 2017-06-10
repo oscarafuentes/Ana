@@ -16,6 +16,7 @@ open class KBComponent: NSObject {
     public override init() {
         super.init()
         self.template = self.generateTemplate()
+        self.template.component = self
     }
     
     open func configure() {

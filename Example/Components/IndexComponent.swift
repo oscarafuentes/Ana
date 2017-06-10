@@ -15,4 +15,16 @@ public class IndexComponent: KBComponent {
         return IndexTemplate()
     }
     
+    public func onRouteAbout() {
+        Kerabyte.dispatch(URL(string: "/about")!)
+    }
+    
+    public func onRoutePrivacyPolicy() {
+        Kerabyte.dispatch(URL(string: "/privacy-policy")!)
+    }
+    
+    public func onRouteTermsOfUse() {
+        Kerabyte.dispatch(URL(string: "/terms-of-use")!)
+    }
+    
 }

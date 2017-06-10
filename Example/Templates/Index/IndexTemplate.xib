@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IndexTemplate" customModule="Example" customModuleProvider="target">
             <connections>
+                <outlet property="aboutButton" destination="u39-mf-Vgt" id="iFw-XX-TJE"/>
+                <outlet property="privacyPolicyButton" destination="blS-by-p8W" id="QHd-w7-rZx"/>
+                <outlet property="termsOfUseButton" destination="5k2-ta-PBt" id="aj2-3w-yuB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="9GU-Id-eNH"/>
             </connections>
         </placeholder>
@@ -18,7 +21,45 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A1A-4g-yqC">
+                    <rect key="frame" x="140" y="288.5" width="95" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u39-mf-Vgt">
+                            <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
+                            <state key="normal" title="About">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onTapPublic:" destination="-1" eventType="touchUpInside" id="nex-Qk-fCB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="blS-by-p8W">
+                            <rect key="frame" x="0.0" y="30" width="95" height="30"/>
+                            <state key="normal" title="Privacy Policy">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onTapPublic:" destination="-1" eventType="touchUpInside" id="o08-Bv-0E2"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5k2-ta-PBt">
+                            <rect key="frame" x="0.0" y="60" width="95" height="30"/>
+                            <state key="normal" title="Terms of Use">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onTapPublic:" destination="-1" eventType="touchUpInside" id="ESA-nq-iVw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="A1A-4g-yqC" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6UJ-Np-iRw"/>
+                <constraint firstItem="A1A-4g-yqC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PHX-zB-1RR"/>
+            </constraints>
         </view>
     </objects>
 </document>

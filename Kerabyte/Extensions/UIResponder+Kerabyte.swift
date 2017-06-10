@@ -29,7 +29,7 @@ extension UIResponder {
         }
     }
     
-    internal var component: KBComponent? {
+    public var component: KBComponent? {
         get {
             guard let returnValue = objc_getAssociatedObject(self, &UIResponderKerabyteProperties.component) as? KBComponent else {
                 if let view = self as? UIView {
