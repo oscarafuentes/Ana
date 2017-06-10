@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C43AE9C1EECBA84002205F2 /* Ana.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C43AE951EECBA84002205F2 /* Ana.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C43AE9D1EECBA84002205F2 /* Ana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43AE961EECBA84002205F2 /* Ana.swift */; };
+		0C43AE9E1EECBA84002205F2 /* AComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43AE971EECBA84002205F2 /* AComponent.swift */; };
+		0C43AE9F1EECBA84002205F2 /* ARoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43AE981EECBA84002205F2 /* ARoute.swift */; };
+		0C43AEA01EECBA84002205F2 /* ARouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43AE991EECBA84002205F2 /* ARouter.swift */; };
+		0C43AEA11EECBA84002205F2 /* AObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43AE9A1EECBA84002205F2 /* AObservable.swift */; };
+		0C43AEA21EECBA84002205F2 /* ARoutePredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C43AE9B1EECBA84002205F2 /* ARoutePredefined.swift */; };
 		0C7F04601EEA3F17007C95DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F045F1EEA3F17007C95DD /* AppDelegate.swift */; };
 		0C7F04621EEA3F17007C95DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04611EEA3F17007C95DD /* ViewController.swift */; };
 		0C7F04651EEA3F17007C95DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C7F04631EEA3F17007C95DD /* Main.storyboard */; };
@@ -34,13 +41,6 @@
 		0CE838DE1EEC55170054A268 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838DD1EEC55170054A268 /* LICENSE.md */; };
 		0CE838EB1EECB3BE0054A268 /* UIResponder+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E11EECB3BE0054A268 /* UIResponder+Kerabyte.swift */; };
 		0CE838EC1EECB3BE0054A268 /* UIViewController+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E21EECB3BE0054A268 /* UIViewController+Kerabyte.swift */; };
-		0CE838EE1EECB3BE0054A268 /* KBComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E41EECB3BE0054A268 /* KBComponent.swift */; };
-		0CE838EF1EECB3BE0054A268 /* KBObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E51EECB3BE0054A268 /* KBObservable.swift */; };
-		0CE838F01EECB3BE0054A268 /* KBRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E61EECB3BE0054A268 /* KBRoute.swift */; };
-		0CE838F11EECB3BE0054A268 /* KBRoutePredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E71EECB3BE0054A268 /* KBRoutePredefined.swift */; };
-		0CE838F21EECB3BE0054A268 /* KBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838E81EECB3BE0054A268 /* KBRouter.swift */; };
-		0CE838F31EECB3BE0054A268 /* Kerabyte.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CE838E91EECB3BE0054A268 /* Kerabyte.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0CE838F41EECB3BE0054A268 /* Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE838EA1EECB3BE0054A268 /* Kerabyte.swift */; };
 		0CE838F61EECB49C0054A268 /* Ana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Ana.framework */; };
 		0CE838F71EECB49C0054A268 /* Ana.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Ana.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -84,6 +84,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C43AE951EECBA84002205F2 /* Ana.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ana.h; sourceTree = "<group>"; };
+		0C43AE961EECBA84002205F2 /* Ana.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ana.swift; sourceTree = "<group>"; };
+		0C43AE971EECBA84002205F2 /* AComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AComponent.swift; sourceTree = "<group>"; };
+		0C43AE981EECBA84002205F2 /* ARoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARoute.swift; sourceTree = "<group>"; };
+		0C43AE991EECBA84002205F2 /* ARouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARouter.swift; sourceTree = "<group>"; };
+		0C43AE9A1EECBA84002205F2 /* AObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AObservable.swift; sourceTree = "<group>"; };
+		0C43AE9B1EECBA84002205F2 /* ARoutePredefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARoutePredefined.swift; sourceTree = "<group>"; };
 		0C7F04311EEA35B0007C95DD /* Ana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Ana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7F045D1EEA3F17007C95DD /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C7F045F1EEA3F17007C95DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,13 +126,6 @@
 		0CE838E11EECB3BE0054A268 /* UIResponder+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Kerabyte.swift"; sourceTree = "<group>"; };
 		0CE838E21EECB3BE0054A268 /* UIViewController+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Kerabyte.swift"; sourceTree = "<group>"; };
 		0CE838E31EECB3BE0054A268 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CE838E41EECB3BE0054A268 /* KBComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBComponent.swift; sourceTree = "<group>"; };
-		0CE838E51EECB3BE0054A268 /* KBObservable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBObservable.swift; sourceTree = "<group>"; };
-		0CE838E61EECB3BE0054A268 /* KBRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoute.swift; sourceTree = "<group>"; };
-		0CE838E71EECB3BE0054A268 /* KBRoutePredefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoutePredefined.swift; sourceTree = "<group>"; };
-		0CE838E81EECB3BE0054A268 /* KBRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRouter.swift; sourceTree = "<group>"; };
-		0CE838E91EECB3BE0054A268 /* Kerabyte.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kerabyte.h; sourceTree = "<group>"; };
-		0CE838EA1EECB3BE0054A268 /* Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kerabyte.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,13 +325,13 @@
 			children = (
 				0CE838E01EECB3BE0054A268 /* Extensions */,
 				0CE838E31EECB3BE0054A268 /* Info.plist */,
-				0CE838E41EECB3BE0054A268 /* KBComponent.swift */,
-				0CE838E51EECB3BE0054A268 /* KBObservable.swift */,
-				0CE838E61EECB3BE0054A268 /* KBRoute.swift */,
-				0CE838E71EECB3BE0054A268 /* KBRoutePredefined.swift */,
-				0CE838E81EECB3BE0054A268 /* KBRouter.swift */,
-				0CE838E91EECB3BE0054A268 /* Kerabyte.h */,
-				0CE838EA1EECB3BE0054A268 /* Kerabyte.swift */,
+				0C43AE951EECBA84002205F2 /* Ana.h */,
+				0C43AE961EECBA84002205F2 /* Ana.swift */,
+				0C43AE971EECBA84002205F2 /* AComponent.swift */,
+				0C43AE981EECBA84002205F2 /* ARoute.swift */,
+				0C43AE991EECBA84002205F2 /* ARouter.swift */,
+				0C43AE9A1EECBA84002205F2 /* AObservable.swift */,
+				0C43AE9B1EECBA84002205F2 /* ARoutePredefined.swift */,
 			);
 			path = Ana;
 			sourceTree = "<group>";
@@ -352,7 +352,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE838F31EECB3BE0054A268 /* Kerabyte.h in Headers */,
+				0C43AE9C1EECBA84002205F2 /* Ana.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,15 +531,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CE838EE1EECB3BE0054A268 /* KBComponent.swift in Sources */,
-				0CE838EF1EECB3BE0054A268 /* KBObservable.swift in Sources */,
+				0C43AE9D1EECBA84002205F2 /* Ana.swift in Sources */,
+				0C43AEA21EECBA84002205F2 /* ARoutePredefined.swift in Sources */,
+				0C43AEA01EECBA84002205F2 /* ARouter.swift in Sources */,
+				0C43AEA11EECBA84002205F2 /* AObservable.swift in Sources */,
 				0CE838DE1EEC55170054A268 /* LICENSE.md in Sources */,
+				0C43AE9E1EECBA84002205F2 /* AComponent.swift in Sources */,
+				0C43AE9F1EECBA84002205F2 /* ARoute.swift in Sources */,
 				0CE838EC1EECB3BE0054A268 /* UIViewController+Kerabyte.swift in Sources */,
-				0CE838F11EECB3BE0054A268 /* KBRoutePredefined.swift in Sources */,
-				0CE838F01EECB3BE0054A268 /* KBRoute.swift in Sources */,
 				0CE838EB1EECB3BE0054A268 /* UIResponder+Kerabyte.swift in Sources */,
-				0CE838F21EECB3BE0054A268 /* KBRouter.swift in Sources */,
-				0CE838F41EECB3BE0054A268 /* Kerabyte.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
