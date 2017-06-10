@@ -12,13 +12,17 @@ import UIKit
 extension UIViewController {
     
     public override func enter(parent: UIResponder? = nil, completion: @escaping () -> Void) {
-        guard let window = UIApplication.shared.delegate?.window else {
-            return
+        if let parent = parent as? UIViewController {
+            parent.present(self, animated: true, completion: completion)
+        } else {
+            guard let window = UIApplication.shared.delegate?.window else {
+                return
+            }
+            
+            window?.rootViewController = self
+            window?.makeKeyAndVisible()
+            completion()
         }
-                
-        window?.rootViewController = self
-        window?.makeKeyAndVisible()
-        completion()
     }
     
 }

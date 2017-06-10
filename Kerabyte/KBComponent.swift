@@ -9,18 +9,22 @@
 import Foundation
 import UIKit
 
-open class KBComponent {
+open class KBComponent: NSObject {
     
-    public private(set) var template: UIResponder
+    public private(set) var template: UIResponder!
     
-    public init(_ template: UIResponder) {
-        self.template = template
-        self.configure()
+    public override init() {
+        super.init()
+        self.template = self.generateTemplate()
+        self.template.component = self
     }
     
     open func configure() {
-        self.template.component = self
-        self.template.onInit()
+        
+    }
+    
+    open func generateTemplate() -> UIResponder {
+        return UIResponder()
     }
     
     /**

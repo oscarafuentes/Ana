@@ -12,9 +12,18 @@ import Kerabyte
 public class IndexRoute: KBRoute {
     
     public init() {
-        super.init(KBRouteConfiguration(
-            component: IndexComponent()
-        ))
+        super.init(
+            nil,
+            match: false,
+            subRoutes: [
+                AboutRoute(),
+                PrivacyPolicyRoute(),
+                TermsOfUseRoute()
+            ])
+    }
+    
+    public override func generateComponent() -> KBComponent {
+        return IndexComponent()
     }
     
 }

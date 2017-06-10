@@ -20,7 +20,7 @@ public final class Kerabyte {
      The active route.
      */
     
-    public let url = KBObservable<URL?>(nil)
+    public let url = KBObservable<URL>(URL(string: "/")!)
     
     /**
      The router which manages this application.
@@ -29,22 +29,28 @@ public final class Kerabyte {
     private var router: KBRouter?
     
     /**
-     The stack of active route responders.
+     The stack of active routes.
      */
     
-    private var responderStack: [UIResponder]  = []
+    private var routeStack: [KBRoute] = []
     
     /**
-     The active responder.
+     The stack of active route components.
      */
     
-    private var activeResponder: UIResponder? {
+    private var componentStack: [KBComponent] = []
+    
+    /**
+     The active route.
+     */
+    
+    private var activeRoute: KBRoute? {
         willSet {
-            self.activeResponder?.active = false
+//            self.activeRoute?.active = false
         }
         
         didSet {
-            self.activeResponder?.active = true
+//            self.activeRoute?.active = true
         }
     }
     
@@ -56,14 +62,10 @@ public final class Kerabyte {
      - Parameter router: The router which manages this application.
      */
     
-    public static func register(_ router: KBRouter, url: URL? = nil) {
+    public static func register(_ router: KBRouter, url: URL = URL(string: "/")!) {
         shared.router = router
         
-        if let url = url {
-            dispatch(url)
-        } else if let url = URL(string: "/") {
-            dispatch(url)
-        }
+        dispatch(url)
     }
     
     /**
@@ -87,68 +89,147 @@ public final class Kerabyte {
             return
         }
         
-        guard let template = shared.generate(path.pathComponents, route: router.route) else {
+        guard let routeStack = shared.generate(path.pathComponents, route: router.route) else {
             return
         }
         
-        var outlet: UIResponder? = template
-        
-        var outletStack: [UIResponder] = []
-        while let responder = outlet {
-            outletStack.append(responder)
-            outlet = responder.outlet
+        let toRemove = shared.routeStack.filter { route -> Bool in
+            return routeStack.index(of: route) == nil
         }
         
-        let toRemove = shared.responderStack.filter { responder -> Bool in
-            return outletStack.index(of: responder) == nil
+        let toAdd = routeStack.filter { route -> Bool in
+            return shared.routeStack.index(of: route) == nil
         }
         
-        let toAdd = outletStack.filter { responder -> Bool in
-            return shared.responderStack.index(of: responder) == nil
+        shared.routeStack = shared.routeStack.filter { route -> Bool in
+            return toRemove.index(of: route) == nil
         }
         
-        shared.responderStack = shared.responderStack.filter { responder -> Bool in
-            return toRemove.index(of: responder) == nil
-        }
+        let parent = shared.routeStack.last
+        let parentTemplate = shared.componentStack.last?.template
         
-        let parent = shared.responderStack.last
-        
-        shared.responderStack.append(contentsOf: toAdd)
+        shared.routeStack.append(contentsOf: toAdd)
         
         shared.leave(toRemove) {
-            shared.enter(toAdd, parent: parent)
+            shared.enter(toAdd, parent: parentTemplate)
         }
         
         shared.url.value = url
-        shared.activeResponder = shared.responderStack.last
+        shared.activeRoute = shared.routeStack.last
         shared.historyStack.append(url)
     }
     
-    private func enter(_ responders: [UIResponder], parent: UIResponder?, completion: (() -> Void)? = nil) {
-        guard let first = responders.first else {
-            completion?()
-            return
+    /**
+     Generate the responder hierarchy.
+     
+     - Parameter components: The activity which should be resolved (designated url).
+     - Parameter route: The activity which should be resolved (designated url).
+     */
+    
+    
+    private func generate(_ components: [String], route: KBRoute) -> [KBRoute]? {
+        var returnValue: [KBRoute]?
+        var childRoutes: [KBRoute]?
+        
+        var duplicate = components.map { component -> String in
+            return component.replacingOccurrences(of: "/", with: "")
         }
         
-        first.component?.onInit()
-        
-        first.enter(parent: parent) {
-            var duplicate = responders
-            let subParent = duplicate.removeFirst()
-            self.enter(duplicate, parent: subParent, completion: completion)
+        duplicate = duplicate.filter { component -> Bool in
+            return !component.isEmpty
         }
+        
+        let path        = route.path
+        let subRoutes   = route.subRoutes
+        
+        let routePath   = path?.replacingOccurrences(of: "/", with: "")
+        
+        if let routePath = routePath, duplicate.count > 0 {
+            if routePath == KBRoutePredefined.root.rawValue || routePath == KBRoutePredefined.wildcard.rawValue {
+                returnValue = [route]
+            } else if routePath == duplicate[0] {
+                returnValue = [route]
+                duplicate.removeFirst()
+            }
+            
+            if returnValue != nil && duplicate.count > 0 {
+                for subRoute in subRoutes {
+                    childRoutes = self.generate(duplicate, route: subRoute)
+                    if childRoutes != nil {
+                        break
+                    }
+                }
+                
+                if childRoutes == nil {
+                    returnValue = nil
+                }
+            }
+        } else if let routePath = routePath {
+            if routePath == KBRoutePredefined.root.rawValue || routePath == KBRoutePredefined.wildcard.rawValue {
+                returnValue = [route]
+            }
+        } else {
+            returnValue = [route]
+            
+            if returnValue != nil {
+                for subRoute in subRoutes {
+                    let subRoutePath = subRoute.path?.replacingOccurrences(of: "/", with: "").lowercased()
+                    
+                    if duplicate.count > 0 {
+                        if subRoutePath == duplicate[0] {
+                            childRoutes = self.generate(duplicate, route: subRoute)
+                        }
+                    }
+                    
+                    if subRoutePath == KBRoutePredefined.root.rawValue || subRoutePath == KBRoutePredefined.wildcard.rawValue {
+                        childRoutes = self.generate(duplicate, route: subRoute)
+                    }
+                    
+                    if childRoutes != nil {
+                        break
+                    }
+                }
+            }
+        }
+        
+        if let routes = childRoutes {
+            returnValue?.append(contentsOf: routes)
+        }
+        
+        return returnValue
     }
     
-    private func leave(_ responders: [UIResponder], completion: (() -> Void)? = nil) {
-        guard let last = responders.last else {
+    private func enter(_ routes: [KBRoute], parent: UIResponder?, completion: (() -> Void)? = nil) {
+        guard let first = routes.first else {
             completion?()
             return
         }
         
-        last.component?.onDestroy()
+        let component = first.generateComponent()
+        component.template.onInit()
         
-        last.leave {
-            var duplicate = responders
+        component.template.enter(parent: parent) {
+            var duplicate = routes
+            duplicate.removeFirst()
+            let subParentTemplate = self.componentStack.last?.template
+            
+            self.enter(duplicate, parent: subParentTemplate, completion: completion)
+        }
+        
+        self.componentStack.append(component)
+    }
+    
+    private func leave(_ routes: [KBRoute], completion: (() -> Void)? = nil) {
+        if routes.last == nil {
+            completion?()
+            return
+        }
+        
+        let component = self.componentStack.removeLast()
+        component.onDestroy()
+        
+        component.template.leave {
+            var duplicate = routes
             duplicate.removeLast()
             self.leave(duplicate, completion: completion)
         }
@@ -162,97 +243,6 @@ public final class Kerabyte {
     
     public static func dispatch(_ activity: NSUserActivity) {
         
-    }
-    
-    /**
-     Generate the responder hierarchy.
-     
-     - Parameter components: The activity which should be resolved (designated url).
-     - Parameter route: The activity which should be resolved (designated url).
-     */
-    
-    private func generate(_ components: [String], route: KBRoute) -> UIResponder? {
-        var returnValue: UIResponder?
-        var subTemplate: UIResponder?
-        
-        var duplicate = components.map { component -> String in
-            return component.replacingOccurrences(of: "/", with: "")
-        }
-        
-        duplicate = duplicate.filter { component -> Bool in
-            return !component.isEmpty
-        }
-        
-        let path        = route.configuration.path
-        let component   = route.configuration.component
-        let subRoutes   = route.configuration.subRoutes
-        
-        let routePath   = path?.replacingOccurrences(of: "/", with: "")
-        
-        if let routePath = routePath, duplicate.count > 0 {
-            if routePath == KBRoutePredefined.root.rawValue || routePath == KBRoutePredefined.wildcard.rawValue {
-                returnValue = component?.template
-            } else if routePath == duplicate[0] {
-                returnValue = component?.template
-                duplicate.removeFirst()
-            }
-            
-            if returnValue != nil && duplicate.count > 0 {
-                for subRoute in subRoutes {
-                    subTemplate = self.generate(duplicate, route: subRoute)
-                    if subTemplate != nil {
-                        break
-                    }
-                }
-                
-                if subTemplate == nil {
-                    returnValue = nil
-                }
-            }
-        } else if let routePath = routePath {
-            if routePath == KBRoutePredefined.root.rawValue || routePath == KBRoutePredefined.wildcard.rawValue {
-                returnValue = component?.template
-            }
-        } else {
-            returnValue = component?.template
-            
-            if returnValue != nil {
-                for subRoute in subRoutes {
-                    let subRoutePath = subRoute.configuration.path?.replacingOccurrences(of: "/", with: "").lowercased()
-                    
-                    if duplicate.count > 0 {
-                        if subRoutePath == duplicate[0] {
-                            subTemplate = self.generate(duplicate, route: subRoute)
-                        }
-                    }
-                    
-                    if subRoutePath == KBRoutePredefined.root.rawValue || subRoutePath == KBRoutePredefined.wildcard.rawValue {
-                        subTemplate = self.generate(duplicate, route: subRoute)
-                    }
-                    
-                    if subTemplate != nil {
-                        break
-                    }
-                }
-            }
-        }
-        
-        returnValue?.outlet = subTemplate
-        
-        return returnValue
-    }
-    
-    /**
-     Traverses back one-level in the historical hierarchy of URLs.
-     */
-    
-    public static func onBack() {
-        let count = shared.historyStack.count
-        
-        if count > 2 {
-            let previous = shared.historyStack[count-2]
-            Kerabyte.dispatch(previous)
-        }
     }
     
 }

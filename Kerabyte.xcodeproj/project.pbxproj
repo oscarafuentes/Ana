@@ -11,7 +11,6 @@
 		0C7F043D1EEA3613007C95DD /* Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F043C1EEA3613007C95DD /* Kerabyte.swift */; };
 		0C7F043F1EEA36A5007C95DD /* KBRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F043E1EEA36A5007C95DD /* KBRouter.swift */; };
 		0C7F04411EEA36DF007C95DD /* KBRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04401EEA36DF007C95DD /* KBRoute.swift */; };
-		0C7F04431EEA36F4007C95DD /* KBRouteConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04421EEA36F4007C95DD /* KBRouteConfiguration.swift */; };
 		0C7F04451EEA3778007C95DD /* KBComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04441EEA3778007C95DD /* KBComponent.swift */; };
 		0C7F04481EEA38F7007C95DD /* UIResponder+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04471EEA38F7007C95DD /* UIResponder+Kerabyte.swift */; };
 		0C7F044A1EEA3A33007C95DD /* KBRoutePredefined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04491EEA3A33007C95DD /* KBRoutePredefined.swift */; };
@@ -25,10 +24,23 @@
 		0C7F04801EEA3F18007C95DD /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F047F1EEA3F18007C95DD /* ExampleUITests.swift */; };
 		0C7F048D1EEA41B6007C95DD /* IndexRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */; };
 		0C7F04901EEA41EB007C95DD /* IndexComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */; };
-		0C7F04931EEA4210007C95DD /* IndexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04921EEA4210007C95DD /* IndexTemplate.swift */; };
 		0C7F04951EEA43BD007C95DD /* UIViewController+Kerabyte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */; };
 		0C7F04961EEA447D007C95DD /* Kerabyte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Kerabyte.framework */; };
 		0C7F04971EEA447D007C95DD /* Kerabyte.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7F04311EEA35B0007C95DD /* Kerabyte.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C8BDA781EEBA53700CE613A /* IndexTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA771EEBA53700CE613A /* IndexTemplate.swift */; };
+		0C8BDA7A1EEBA63900CE613A /* IndexTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */; };
+		0C8BDA801EEC2B0400CE613A /* AboutTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA7F1EEC2B0400CE613A /* AboutTemplate.swift */; };
+		0C8BDA841EEC2B1C00CE613A /* PrivacyPolicyTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA831EEC2B1C00CE613A /* PrivacyPolicyTemplate.swift */; };
+		0C8BDA861EEC2B2700CE613A /* TermsOfUseTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA851EEC2B2700CE613A /* TermsOfUseTemplate.swift */; };
+		0C8BDA881EEC2B2F00CE613A /* TermsOfUseTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BDA871EEC2B2F00CE613A /* TermsOfUseTemplate.xib */; };
+		0C8BDA8A1EEC2B3900CE613A /* PrivacyPolicyTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BDA891EEC2B3900CE613A /* PrivacyPolicyTemplate.xib */; };
+		0C8BDA8C1EEC2B4100CE613A /* AboutTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C8BDA8B1EEC2B4100CE613A /* AboutTemplate.xib */; };
+		0C8BDA901EEC2C0900CE613A /* AboutComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA8F1EEC2C0900CE613A /* AboutComponent.swift */; };
+		0C8BDA921EEC2C1200CE613A /* PrivacyPolicyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA911EEC2C1200CE613A /* PrivacyPolicyComponent.swift */; };
+		0C8BDA941EEC2C1B00CE613A /* TermsOfUseComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA931EEC2C1B00CE613A /* TermsOfUseComponent.swift */; };
+		0C8BDA961EEC2C3000CE613A /* AboutRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA951EEC2C3000CE613A /* AboutRoute.swift */; };
+		0C8BDA981EEC2C3A00CE613A /* PrivacyPolicyRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */; };
+		0C8BDA9A1EEC2C4300CE613A /* TermsOfUseRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +88,6 @@
 		0C7F043C1EEA3613007C95DD /* Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kerabyte.swift; sourceTree = "<group>"; };
 		0C7F043E1EEA36A5007C95DD /* KBRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRouter.swift; sourceTree = "<group>"; };
 		0C7F04401EEA36DF007C95DD /* KBRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoute.swift; sourceTree = "<group>"; };
-		0C7F04421EEA36F4007C95DD /* KBRouteConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRouteConfiguration.swift; sourceTree = "<group>"; };
 		0C7F04441EEA3778007C95DD /* KBComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBComponent.swift; sourceTree = "<group>"; };
 		0C7F04471EEA38F7007C95DD /* UIResponder+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIResponder+Kerabyte.swift"; sourceTree = "<group>"; };
 		0C7F04491EEA3A33007C95DD /* KBRoutePredefined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KBRoutePredefined.swift; sourceTree = "<group>"; };
@@ -96,8 +107,21 @@
 		0C7F04811EEA3F18007C95DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexRoute.swift; sourceTree = "<group>"; };
 		0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexComponent.swift; sourceTree = "<group>"; };
-		0C7F04921EEA4210007C95DD /* IndexTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTemplate.swift; sourceTree = "<group>"; };
 		0C7F04941EEA43BD007C95DD /* UIViewController+Kerabyte.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Kerabyte.swift"; sourceTree = "<group>"; };
+		0C8BDA771EEBA53700CE613A /* IndexTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTemplate.swift; sourceTree = "<group>"; };
+		0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IndexTemplate.xib; sourceTree = "<group>"; };
+		0C8BDA7F1EEC2B0400CE613A /* AboutTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutTemplate.swift; sourceTree = "<group>"; };
+		0C8BDA831EEC2B1C00CE613A /* PrivacyPolicyTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyTemplate.swift; sourceTree = "<group>"; };
+		0C8BDA851EEC2B2700CE613A /* TermsOfUseTemplate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseTemplate.swift; sourceTree = "<group>"; };
+		0C8BDA871EEC2B2F00CE613A /* TermsOfUseTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsOfUseTemplate.xib; sourceTree = "<group>"; };
+		0C8BDA891EEC2B3900CE613A /* PrivacyPolicyTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PrivacyPolicyTemplate.xib; sourceTree = "<group>"; };
+		0C8BDA8B1EEC2B4100CE613A /* AboutTemplate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutTemplate.xib; sourceTree = "<group>"; };
+		0C8BDA8F1EEC2C0900CE613A /* AboutComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutComponent.swift; sourceTree = "<group>"; };
+		0C8BDA911EEC2C1200CE613A /* PrivacyPolicyComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyComponent.swift; sourceTree = "<group>"; };
+		0C8BDA931EEC2C1B00CE613A /* TermsOfUseComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseComponent.swift; sourceTree = "<group>"; };
+		0C8BDA951EEC2C3000CE613A /* AboutRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutRoute.swift; sourceTree = "<group>"; };
+		0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyRoute.swift; sourceTree = "<group>"; };
+		0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfUseRoute.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +186,6 @@
 				0C7F04351EEA35B0007C95DD /* Info.plist */,
 				0C7F04441EEA3778007C95DD /* KBComponent.swift */,
 				0C7F04401EEA36DF007C95DD /* KBRoute.swift */,
-				0C7F04421EEA36F4007C95DD /* KBRouteConfiguration.swift */,
 				0C7F04491EEA3A33007C95DD /* KBRoutePredefined.swift */,
 				0C7F043E1EEA36A5007C95DD /* KBRouter.swift */,
 				0C7F04341EEA35B0007C95DD /* Kerabyte.h */,
@@ -218,6 +241,7 @@
 		0C7F048B1EEA41AB007C95DD /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				0C8BDA8E1EEC2BF500CE613A /* Public */,
 				0C7F048C1EEA41B6007C95DD /* IndexRoute.swift */,
 			);
 			path = Routes;
@@ -226,6 +250,7 @@
 		0C7F048E1EEA41E2007C95DD /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0C8BDA8D1EEC2BF000CE613A /* Public */,
 				0C7F048F1EEA41EB007C95DD /* IndexComponent.swift */,
 			);
 			path = Components;
@@ -234,9 +259,76 @@
 		0C7F04911EEA4208007C95DD /* Templates */ = {
 			isa = PBXGroup;
 			children = (
-				0C7F04921EEA4210007C95DD /* IndexTemplate.swift */,
+				0C8BDA7B1EEBA78200CE613A /* Public */,
+				0C8BDA761EEBA53700CE613A /* Index */,
 			);
 			path = Templates;
+			sourceTree = "<group>";
+		};
+		0C8BDA761EEBA53700CE613A /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA771EEBA53700CE613A /* IndexTemplate.swift */,
+				0C8BDA791EEBA63900CE613A /* IndexTemplate.xib */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
+		0C8BDA7B1EEBA78200CE613A /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA7C1EEBA78200CE613A /* About */,
+				0C8BDA7D1EEBA78200CE613A /* PrivacyPolicy */,
+				0C8BDA7E1EEBA78200CE613A /* TermsOfUse */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		0C8BDA7C1EEBA78200CE613A /* About */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA7F1EEC2B0400CE613A /* AboutTemplate.swift */,
+				0C8BDA8B1EEC2B4100CE613A /* AboutTemplate.xib */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		0C8BDA7D1EEBA78200CE613A /* PrivacyPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA831EEC2B1C00CE613A /* PrivacyPolicyTemplate.swift */,
+				0C8BDA891EEC2B3900CE613A /* PrivacyPolicyTemplate.xib */,
+			);
+			path = PrivacyPolicy;
+			sourceTree = "<group>";
+		};
+		0C8BDA7E1EEBA78200CE613A /* TermsOfUse */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA851EEC2B2700CE613A /* TermsOfUseTemplate.swift */,
+				0C8BDA871EEC2B2F00CE613A /* TermsOfUseTemplate.xib */,
+			);
+			path = TermsOfUse;
+			sourceTree = "<group>";
+		};
+		0C8BDA8D1EEC2BF000CE613A /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA8F1EEC2C0900CE613A /* AboutComponent.swift */,
+				0C8BDA911EEC2C1200CE613A /* PrivacyPolicyComponent.swift */,
+				0C8BDA931EEC2C1B00CE613A /* TermsOfUseComponent.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		0C8BDA8E1EEC2BF500CE613A /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				0C8BDA951EEC2C3000CE613A /* AboutRoute.swift */,
+				0C8BDA971EEC2C3A00CE613A /* PrivacyPolicyRoute.swift */,
+				0C8BDA991EEC2C4300CE613A /* TermsOfUseRoute.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,8 +486,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8BDA8C1EEC2B4100CE613A /* AboutTemplate.xib in Resources */,
 				0C7F046A1EEA3F17007C95DD /* LaunchScreen.storyboard in Resources */,
+				0C8BDA881EEC2B2F00CE613A /* TermsOfUseTemplate.xib in Resources */,
+				0C8BDA8A1EEC2B3900CE613A /* PrivacyPolicyTemplate.xib in Resources */,
 				0C7F04671EEA3F17007C95DD /* Assets.xcassets in Resources */,
+				0C8BDA7A1EEBA63900CE613A /* IndexTemplate.xib in Resources */,
 				0C7F04651EEA3F17007C95DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +519,6 @@
 			files = (
 				0C7F043D1EEA3613007C95DD /* Kerabyte.swift in Sources */,
 				0C7F04481EEA38F7007C95DD /* UIResponder+Kerabyte.swift in Sources */,
-				0C7F04431EEA36F4007C95DD /* KBRouteConfiguration.swift in Sources */,
 				0C7F04411EEA36DF007C95DD /* KBRoute.swift in Sources */,
 				0C7F044A1EEA3A33007C95DD /* KBRoutePredefined.swift in Sources */,
 				0C7F04451EEA3778007C95DD /* KBComponent.swift in Sources */,
@@ -438,9 +533,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C7F04621EEA3F17007C95DD /* ViewController.swift in Sources */,
+				0C8BDA801EEC2B0400CE613A /* AboutTemplate.swift in Sources */,
+				0C8BDA9A1EEC2C4300CE613A /* TermsOfUseRoute.swift in Sources */,
+				0C8BDA921EEC2C1200CE613A /* PrivacyPolicyComponent.swift in Sources */,
 				0C7F04601EEA3F17007C95DD /* AppDelegate.swift in Sources */,
 				0C7F04901EEA41EB007C95DD /* IndexComponent.swift in Sources */,
-				0C7F04931EEA4210007C95DD /* IndexTemplate.swift in Sources */,
+				0C8BDA961EEC2C3000CE613A /* AboutRoute.swift in Sources */,
+				0C8BDA861EEC2B2700CE613A /* TermsOfUseTemplate.swift in Sources */,
+				0C8BDA901EEC2C0900CE613A /* AboutComponent.swift in Sources */,
+				0C8BDA781EEBA53700CE613A /* IndexTemplate.swift in Sources */,
+				0C8BDA981EEC2C3A00CE613A /* PrivacyPolicyRoute.swift in Sources */,
+				0C8BDA941EEC2C1B00CE613A /* TermsOfUseComponent.swift in Sources */,
+				0C8BDA841EEC2B1C00CE613A /* PrivacyPolicyTemplate.swift in Sources */,
 				0C7F048D1EEA41B6007C95DD /* IndexRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,6 +865,7 @@
 				0C7F04831EEA3F18007C95DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C7F04891EEA3F18007C95DD /* Build configuration list for PBXNativeTarget "ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -769,6 +874,7 @@
 				0C7F04851EEA3F18007C95DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C7F048A1EEA3F18007C95DD /* Build configuration list for PBXNativeTarget "ExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -777,6 +883,7 @@
 				0C7F04871EEA3F18007C95DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

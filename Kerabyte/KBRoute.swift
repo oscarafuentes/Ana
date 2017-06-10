@@ -8,12 +8,21 @@
 
 import Foundation
 
-open class KBRoute {
+open class KBRoute: NSObject {
+        
+    public var match: Bool
+    public var path: String?
+    public var subRoutes: [KBRoute] = []
     
-    public private(set) var configuration: KBRouteConfiguration
+    public init(_ path: String? = nil, match: Bool = true, subRoutes: [KBRoute] = []) {
+        self.match = match
+        self.path = path
+        self.subRoutes = subRoutes
+        super.init()
+    }
     
-    public init(_ configuration: KBRouteConfiguration) {
-        self.configuration = configuration
+    open func generateComponent() -> KBComponent {
+        return KBComponent()
     }
     
 }
