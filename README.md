@@ -148,13 +148,21 @@ public class IndexTemplate: UIViewController {
 
 ## Documentation
 
-### `Kerabyte`
+### Kerabyte
 
-### `KBRouter`
+#### Static Functions
 
-### `KBRoute`
+* `register(_ router: KBRouter, url: URL)` - Registers a router for path resolution, redirection, etc.
+    * Parameter `router`: The router which manages this application.
+    * Parameter `url`: The initial URL that should be resolved (defaults to "/").
+* `dispatch(_ url: URL)` - Dispatches a route signal for the given url.
+    * Parameter `url`: The URL that should be resolved.
 
-### `KBComponent`
+### KBRouter
+
+### KBRoute
+
+### KBComponent
 
 ## Versioning
 
