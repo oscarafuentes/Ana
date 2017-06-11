@@ -1,4 +1,4 @@
-# Kerabyte
+# Ana
 
 ## Table of Contents
 
@@ -32,12 +32,12 @@ A minimum deployment target of iOS 10.0 is required to integrate this module.
 
 ### Usage
 
-To configure your application, you must register an instance of `KBRouter` with 
-a given `KBRoute`.
+To configure your application, you must register an instance of `ARouter` with 
+a given `ARoute`.
 
 ```swift
 import UIKit
-import Kerabyte
+import Ana
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -45,22 +45,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {        
-        let router = KBRouter(IndexRoute())
+        let router = ARouter(IndexRoute())
 
-        Kerabyte.register(router)
+        Ana.register(router)
 
         return true
     }
 }
 ```
 
-In this scenario, `IndexRoute` subclasses `KBRoute` to act as a wildcard route.
+In this scenario, `IndexRoute` subclasses `ARoute` to act as a wildcard route.
 
 ```swift
 import Foundation
-import Kerabyte
+import Ana
 
-public class IndexRoute: KBRoute {
+public class IndexRoute: ARoute {
 
     public init() {
         super.init(
@@ -73,37 +73,37 @@ public class IndexRoute: KBRoute {
             ])
     }
 
-    public override func generateComponent() -> KBComponent {
+    public override func generateComponent() -> AComponent {
         return IndexComponent()
     }
 
 }
 ```
 
-`IndexComponent` subclasses `KBComponent` to act as the delegate between 
+`IndexComponent` subclasses `AComponent` to act as the delegate between 
 all business logic and the user-facing interface. It supplies a template 
 (UIResponder) via the `generateTemplate` function for runtime-based interfaces.
 
 ```swift
 import Foundation
-import Kerabyte
+import Ana
 
-public class IndexComponent: KBComponent {
+public class IndexComponent: AComponent {
 
     public override func generateTemplate() -> UIResponder {
         return IndexTemplate()
     }
 
     public func onRouteAbout() {
-        Kerabyte.dispatch(URL(string: "/about")!)
+        Ana.dispatch(URL(string: "/about")!)
     }
 
     public func onRoutePrivacyPolicy() {
-        Kerabyte.dispatch(URL(string: "/privacy-policy")!)
+        Ana.dispatch(URL(string: "/privacy-policy")!)
     }
 
     public func onRouteTermsOfUse() {
-        Kerabyte.dispatch(URL(string: "/terms-of-use")!)
+        Ana.dispatch(URL(string: "/terms-of-use")!)
     }
 
 }
@@ -150,39 +150,39 @@ An example is included in this repository for convenience.
 
 ## Documentation
 
-### Kerabyte
+### Ana
 
 #### Static Functions
 
-* `register(_ router: KBRouter, url: URL)` - Registers a router for path resolution, redirection, etc.
+* `register(_ router: ARouter, url: URL)` - Registers a router for path resolution, redirection, etc.
     * Parameter `router`: The router which manages this application.
     * Parameter `url`: The initial URL that should be resolved (defaults to "/").
 * `dispatch(_ url: URL)` - Dispatches a route signal for the given url.
     * Parameter `url`: The URL that should be resolved.
 
-### KBRouter
+### ARouter
 
 #### Initializers
 
-* `init(_ route: KBRoute, domains: [String])`
+* `init(_ route: ARoute, domains: [String])`
     * Parameter `route`: The base route.
     * Parameter `domains`: The domains that should be handled (defaults to []).
 
-### KBRoute
+### ARoute
 
 #### Initializers
 
-* `init(_ path: String, match: Bool, subRoutes: [KBRoute])`
+* `init(_ path: String, match: Bool, subRoutes: [ARoute])`
     * Parameter `path`: Route path (defaults to nil).
     * Parameter `match`: Specifies the matching scheme (defaults to true).
     * Parameter `subRoutes`: Child routes available under this route (defaults to []).
 
 #### Instance Functions
 
-* `generateComponent() -> KBComponent` - Creates a component object linked to this route.
-    * Returns: A `KBComponent` to link with this route.
+* `generateComponent() -> AComponent` - Creates a component object linked to this route.
+    * Returns: A `AComponent` to link with this route.
 
-### KBComponent
+### AComponent
 
 #### Instance Functions
 
@@ -196,7 +196,7 @@ An example is included in this repository for convenience.
 
 ## Versioning
 
-This module uses [semantic versioning](http://semver.org/). For the versions available, see the [tags on this repository](https://github.com/oscarafuentes/Kerabyte/tags). 
+This module uses [semantic versioning](http://semver.org/). For the versions available, see the [tags on this repository](https://github.com/oscarafuentes/Ana/tags). 
 
 ## Maintainers
 

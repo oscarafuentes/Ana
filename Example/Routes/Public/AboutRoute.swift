@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import Kerabyte
+import Ana
 
-public class AboutRoute: KBRoute {
+public class AboutRoute: ARoute {
     
     public init() {
         super.init("/about")
     }
     
-    public override func generateComponent() -> KBComponent {
+    public override func generateComponent() -> AComponent {
         return AboutComponent()
     }
     

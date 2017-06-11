@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import Kerabyte
+import Ana
 
-public class PrivacyPolicyRoute: KBRoute {
+public class PrivacyPolicyRoute: ARoute {
     
     public init() {
         super.init("/privacy-policy")
     }
     
-    public override func generateComponent() -> KBComponent {
+    public override func generateComponent() -> AComponent {
         return PrivacyPolicyComponent()
     }
     

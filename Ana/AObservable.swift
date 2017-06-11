@@ -1,6 +1,6 @@
 //
-//  KBObservable.swift
-//  Kerabyte
+//  AObservable.swift
+//  Ana
 //
 //  Created by Oscar Fuentes on 6/8/17.
 //  Copyright © 2017 Oscar Fuentes. All rights reserved.
@@ -13,7 +13,7 @@ import Foundation
  "will set" event types, and "did set" event types.
  */
 
-public class KBObservable<T> {
+public class AObservable<T> {
     
     /**
      The function signature for the callback used during new value storage.
@@ -21,7 +21,7 @@ public class KBObservable<T> {
      - Parameter value: The value which conforms to the designated generic type.
      */
     
-    public typealias KBObservableValueFunction = (T) -> Void
+    public typealias AObservableValueFunction = (T) -> Void
     
     /**
      The current value, an element of generic type T.
@@ -41,8 +41,8 @@ public class KBObservable<T> {
         }
     }
     
-    private var didSetCallbacks: [KBObservableValueFunction] = [KBObservableValueFunction]()
-    private var willSetCallbacks: [KBObservableValueFunction] = [KBObservableValueFunction]()
+    private var didSetCallbacks: [AObservableValueFunction] = [AObservableValueFunction]()
+    private var willSetCallbacks: [AObservableValueFunction] = [AObservableValueFunction]()
     
     /**
      Initializes an observable object where:
@@ -62,7 +62,7 @@ public class KBObservable<T> {
      - Parameter callback: The callback to run immediately after the new value is stored.
      */
     
-    public func observeDidSet(_ callback: @escaping KBObservableValueFunction) {
+    public func observeDidSet(_ callback: @escaping AObservableValueFunction) {
         callback(self.value)
         self.didSetCallbacks.append(callback)
     }
@@ -73,7 +73,7 @@ public class KBObservable<T> {
      - Parameter callback: The callback to run just before the new value is stored.
      */
     
-    public func observeWillSet(_ callback: @escaping KBObservableValueFunction) {
+    public func observeWillSet(_ callback: @escaping AObservableValueFunction) {
         callback(self.value)
         self.willSetCallbacks.append(callback)
     }

@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import Kerabyte
+import Ana
 
-public class TermsOfUseRoute: KBRoute {
+public class TermsOfUseRoute: ARoute {
     
     public init() {
         super.init("/terms-of-use")
     }
     
-    public override func generateComponent() -> KBComponent {
+    public override func generateComponent() -> AComponent {
         return TermsOfUseComponent()
     }
     

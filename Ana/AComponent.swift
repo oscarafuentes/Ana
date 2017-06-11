@@ -1,6 +1,6 @@
 //
-//  KBComponent.swift
-//  Kerabyte
+//  AComponent.swift
+//  Ana
 //
 //  Created by Oscar Fuentes on 6/8/17.
 //  Copyright © 2017 Oscar Fuentes. All rights reserved.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-open class KBComponent: NSObject {
+open class AComponent: NSObject {
     
     public private(set) var template: UIResponder!
     

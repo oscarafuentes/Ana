@@ -1,6 +1,6 @@
 //
-//  UIResponder+Kerabyte.swift
-//  Kerabyte
+//  UIResponder+Ana.swift
+//  Ana
 //
 //  Created by Oscar Fuentes on 6/8/17.
 //  Copyright © 2017 Oscar Fuentes. All rights reserved.
@@ -11,27 +11,27 @@ import UIKit
 
 extension UIResponder {
     
-    private struct UIResponderKerabyteProperties {
+    private struct UIResponderAnaProperties {
         
         static var outlet: UIResponder? = nil
-        static var component: KBComponent? = nil
+        static var component: AComponent? = nil
         static var active: Bool? = nil
         
     }
     
     public var outlet: UIResponder? {
         get {
-            return objc_getAssociatedObject(self, &UIResponderKerabyteProperties.outlet) as? UIResponder
+            return objc_getAssociatedObject(self, &UIResponderAnaProperties.outlet) as? UIResponder
         }
         
         set {
-            objc_setAssociatedObject(self, &UIResponderKerabyteProperties.outlet, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UIResponderAnaProperties.outlet, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
-    public var component: KBComponent? {
+    public var component: AComponent? {
         get {
-            guard let returnValue = objc_getAssociatedObject(self, &UIResponderKerabyteProperties.component) as? KBComponent else {
+            guard let returnValue = objc_getAssociatedObject(self, &UIResponderAnaProperties.component) as? AComponent else {
                 if let view = self as? UIView {
                     var parent = view.superview
                     
@@ -51,17 +51,17 @@ extension UIResponder {
         }
         
         set {
-            objc_setAssociatedObject(self, &UIResponderKerabyteProperties.component, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UIResponderAnaProperties.component, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
     public internal(set) var active: Bool {
         get {
-            return objc_getAssociatedObject(self, &UIResponderKerabyteProperties.active) as? Bool ?? false
+            return objc_getAssociatedObject(self, &UIResponderAnaProperties.active) as? Bool ?? false
         }
         
         set {
-            objc_setAssociatedObject(self, &UIResponderKerabyteProperties.active, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &UIResponderAnaProperties.active, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
     
