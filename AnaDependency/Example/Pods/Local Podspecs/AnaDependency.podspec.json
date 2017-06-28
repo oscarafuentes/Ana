@@ -1,0 +1,22 @@
+{
+  "name": "AnaDependency",
+  "version": "0.1.0",
+  "summary": "A short description of AnaDependency.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/oscarafuentes/AnaDependency",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "oscarafuentes": "oscar@appwinit.com"
+  },
+  "source": {
+    "git": "https://github.com/oscarafuentes/AnaDependency.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AnaDependency/Classes/**/*"
+}

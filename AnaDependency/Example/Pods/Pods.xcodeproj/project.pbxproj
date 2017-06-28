@@ -1,0 +1,570 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		087CFC4FDA46F140789DC680D8775A76 /* AnaDependency-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E14724146B654B47AACE0B93F96C66C9 /* AnaDependency-dummy.m */; };
+		1A5147C60B8F88BB58FB58592E26A9F3 /* Pods-AnaDependency_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CA43493A710F77415302B6A8234DFF /* Pods-AnaDependency_Tests-dummy.m */; };
+		8BFC80B2855BCC62DF8F9D9FC7708866 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC98D5BC323A911A70D4E5599329D514 /* ReplaceMe.swift */; };
+		9484FB0464634E25C9E608CBDD9E86B1 /* Pods-AnaDependency_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E670303245D64FA4569893B41F549B5F /* Pods-AnaDependency_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4405B1DA26F8BE79D58209885382340 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D7EEBEC2CE6EFDD038C789657BBD17F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		DB25D29A04E5D92C4BF15BCC4E960194 /* AnaDependency-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F773404E35BF75891ACB8779B9B8B21E /* AnaDependency-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D2A741574823B7B705E4C706EDCAE46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88FB140EEB5C902EABBCBDBFB006744C;
+			remoteInfo = AnaDependency;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00D6D4012A3599BF765CEB0DD3A444D3 /* AnaDependency.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnaDependency.framework; path = AnaDependency.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C4D60ADC91C730ED2D866DA9A6F4A53 /* AnaDependency.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AnaDependency.modulemap; sourceTree = "<group>"; };
+		0DDC84BF917C65A30E9FD7CC1BED700C /* Pods-AnaDependency_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnaDependency_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E79255A202297A3EDCE591766CF501E /* AnaDependency.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnaDependency.xcconfig; sourceTree = "<group>"; };
+		15DDDADB108E1EB6E5FED76317AFF4B2 /* Pods-AnaDependency_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnaDependency_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		38FF5777DB3B18E4BF31E1A0D00A7B05 /* AnaDependency-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnaDependency-prefix.pch"; sourceTree = "<group>"; };
+		4C0A0F88B5A1066FFFB90E6C2CD1096F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		508050BF57D29543DA8C6B389B139ABD /* Pods-AnaDependency_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnaDependency_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5CC3B909E4252258775753B8608FA512 /* Pods-AnaDependency_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnaDependency_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5DF7EF3A7C977C24B606F9C1019AEBC4 /* Pods_AnaDependency_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AnaDependency_Tests.framework; path = "Pods-AnaDependency_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E01E156D7F9C5D5BE227505F782E2F1 /* Pods-AnaDependency_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-AnaDependency_Tests.modulemap"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6868347A6319C3BD4DACEEFA595354BE /* Pods-AnaDependency_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnaDependency_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C2D6D03BB420A447F38082E4AF56EA87 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E14724146B654B47AACE0B93F96C66C9 /* AnaDependency-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnaDependency-dummy.m"; sourceTree = "<group>"; };
+		E670303245D64FA4569893B41F549B5F /* Pods-AnaDependency_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnaDependency_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E7CA43493A710F77415302B6A8234DFF /* Pods-AnaDependency_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnaDependency_Tests-dummy.m"; sourceTree = "<group>"; };
+		EBE8D09EB247714709CA8309C6CE4270 /* Pods-AnaDependency_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnaDependency_Tests-resources.sh"; sourceTree = "<group>"; };
+		EC98D5BC323A911A70D4E5599329D514 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		F773404E35BF75891ACB8779B9B8B21E /* AnaDependency-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnaDependency-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EF20F32C8B0EC756305D49BB5ACD279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7EEBEC2CE6EFDD038C789657BBD17F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B01C9AB8D3B6ABC0CCEB5EE485A0017D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4405B1DA26F8BE79D58209885382340 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AFC42BFBBE27E4F0127307F1F4EBB29 /* Pods-AnaDependency_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C2D6D03BB420A447F38082E4AF56EA87 /* Info.plist */,
+				5E01E156D7F9C5D5BE227505F782E2F1 /* Pods-AnaDependency_Tests.modulemap */,
+				5CC3B909E4252258775753B8608FA512 /* Pods-AnaDependency_Tests-acknowledgements.markdown */,
+				508050BF57D29543DA8C6B389B139ABD /* Pods-AnaDependency_Tests-acknowledgements.plist */,
+				E7CA43493A710F77415302B6A8234DFF /* Pods-AnaDependency_Tests-dummy.m */,
+				15DDDADB108E1EB6E5FED76317AFF4B2 /* Pods-AnaDependency_Tests-frameworks.sh */,
+				EBE8D09EB247714709CA8309C6CE4270 /* Pods-AnaDependency_Tests-resources.sh */,
+				E670303245D64FA4569893B41F549B5F /* Pods-AnaDependency_Tests-umbrella.h */,
+				0DDC84BF917C65A30E9FD7CC1BED700C /* Pods-AnaDependency_Tests.debug.xcconfig */,
+				6868347A6319C3BD4DACEEFA595354BE /* Pods-AnaDependency_Tests.release.xcconfig */,
+			);
+			name = "Pods-AnaDependency_Tests";
+			path = "Target Support Files/Pods-AnaDependency_Tests";
+			sourceTree = "<group>";
+		};
+		2864C060230BBE98BD290D3BF4D02B4C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C4D60ADC91C730ED2D866DA9A6F4A53 /* AnaDependency.modulemap */,
+				0E79255A202297A3EDCE591766CF501E /* AnaDependency.xcconfig */,
+				E14724146B654B47AACE0B93F96C66C9 /* AnaDependency-dummy.m */,
+				38FF5777DB3B18E4BF31E1A0D00A7B05 /* AnaDependency-prefix.pch */,
+				F773404E35BF75891ACB8779B9B8B21E /* AnaDependency-umbrella.h */,
+				4C0A0F88B5A1066FFFB90E6C2CD1096F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AnaDependency";
+			sourceTree = "<group>";
+		};
+		4DFCFE8867FBF20F277F4AEBCA7E7907 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0AFC42BFBBE27E4F0127307F1F4EBB29 /* Pods-AnaDependency_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5B82B9102C2B7A492FA463A59B90370A /* AnaDependency */ = {
+			isa = PBXGroup;
+			children = (
+				ACB0D96FD331C9F7EC1E70F56C5653D8 /* Classes */,
+			);
+			name = AnaDependency;
+			path = AnaDependency;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D7BE550CC5619D35C47D50F65031D43D /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				DCF345A3F96E202EEB38E456B7879E0D /* Products */,
+				4DFCFE8867FBF20F277F4AEBCA7E7907 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		A871B279D6556708D649F3F3650865B3 /* AnaDependency */ = {
+			isa = PBXGroup;
+			children = (
+				5B82B9102C2B7A492FA463A59B90370A /* AnaDependency */,
+				2864C060230BBE98BD290D3BF4D02B4C /* Support Files */,
+			);
+			name = AnaDependency;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		ACB0D96FD331C9F7EC1E70F56C5653D8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EC98D5BC323A911A70D4E5599329D514 /* ReplaceMe.swift */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D7BE550CC5619D35C47D50F65031D43D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A871B279D6556708D649F3F3650865B3 /* AnaDependency */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DCF345A3F96E202EEB38E456B7879E0D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00D6D4012A3599BF765CEB0DD3A444D3 /* AnaDependency.framework */,
+				5DF7EF3A7C977C24B606F9C1019AEBC4 /* Pods_AnaDependency_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B6EA169188B318619D9517B766C67698 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB25D29A04E5D92C4BF15BCC4E960194 /* AnaDependency-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB9600146D1A5CBFB27CA1E2FFBC341F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9484FB0464634E25C9E608CBDD9E86B1 /* Pods-AnaDependency_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0A4B1327F254F38396D37E5EDE43E384 /* Pods-AnaDependency_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAB5C943191CE87A0E4D5B22841CD476 /* Build configuration list for PBXNativeTarget "Pods-AnaDependency_Tests" */;
+			buildPhases = (
+				66A5E26DF7C36938AE8165D803D459EE /* Sources */,
+				4EF20F32C8B0EC756305D49BB5ACD279 /* Frameworks */,
+				EB9600146D1A5CBFB27CA1E2FFBC341F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97F3B8F3FCB4E46DDE7872BE20ACBC2F /* PBXTargetDependency */,
+			);
+			name = "Pods-AnaDependency_Tests";
+			productName = "Pods-AnaDependency_Tests";
+			productReference = 5DF7EF3A7C977C24B606F9C1019AEBC4 /* Pods_AnaDependency_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88FB140EEB5C902EABBCBDBFB006744C /* AnaDependency */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E454981FB4760DF7073AEF0CB17C9918 /* Build configuration list for PBXNativeTarget "AnaDependency" */;
+			buildPhases = (
+				B860E4E8DF4D5E356FCB971E643D7AB8 /* Sources */,
+				B01C9AB8D3B6ABC0CCEB5EE485A0017D /* Frameworks */,
+				B6EA169188B318619D9517B766C67698 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnaDependency;
+			productName = AnaDependency;
+			productReference = 00D6D4012A3599BF765CEB0DD3A444D3 /* AnaDependency.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DCF345A3F96E202EEB38E456B7879E0D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88FB140EEB5C902EABBCBDBFB006744C /* AnaDependency */,
+				0A4B1327F254F38396D37E5EDE43E384 /* Pods-AnaDependency_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66A5E26DF7C36938AE8165D803D459EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5147C60B8F88BB58FB58592E26A9F3 /* Pods-AnaDependency_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B860E4E8DF4D5E356FCB971E643D7AB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				087CFC4FDA46F140789DC680D8775A76 /* AnaDependency-dummy.m in Sources */,
+				8BFC80B2855BCC62DF8F9D9FC7708866 /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97F3B8F3FCB4E46DDE7872BE20ACBC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnaDependency;
+			target = 88FB140EEB5C902EABBCBDBFB006744C /* AnaDependency */;
+			targetProxy = 5D2A741574823B7B705E4C706EDCAE46 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		46962008AF031D0F86C3E42570864932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6868347A6319C3BD4DACEEFA595354BE /* Pods-AnaDependency_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnaDependency_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnaDependency_Tests/Pods-AnaDependency_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AnaDependency_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F8081DB217F2729B46654CB035DAE0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DDC84BF917C65A30E9FD7CC1BED700C /* Pods-AnaDependency_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnaDependency_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnaDependency_Tests/Pods-AnaDependency_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_AnaDependency_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D51A0C06B2F4AB40FC0ED5EC85BCA6A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E79255A202297A3EDCE591766CF501E /* AnaDependency.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AnaDependency/AnaDependency-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnaDependency/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AnaDependency/AnaDependency.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AnaDependency;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F8E52788CF8B52C0782C496B190EFA13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E79255A202297A3EDCE591766CF501E /* AnaDependency.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AnaDependency/AnaDependency-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnaDependency/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AnaDependency/AnaDependency.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AnaDependency;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E454981FB4760DF7073AEF0CB17C9918 /* Build configuration list for PBXNativeTarget "AnaDependency" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8E52788CF8B52C0782C496B190EFA13 /* Debug */,
+				D51A0C06B2F4AB40FC0ED5EC85BCA6A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAB5C943191CE87A0E4D5B22841CD476 /* Build configuration list for PBXNativeTarget "Pods-AnaDependency_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F8081DB217F2729B46654CB035DAE0A /* Debug */,
+				46962008AF031D0F86C3E42570864932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
