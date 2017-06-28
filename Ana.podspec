@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'AnaDependency'
-  s.version          = '0.2.0'
+  s.name             = 'Ana'
+  s.version          = '0.2.1'
   s.summary          = 'A routing solution for deploying path-oriented iOS applications (conforms to the Clean VIPER Architecture to simplify development).'
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,9 @@ This module provides a routing solution for deploying path-oriented iOS applicat
   s.source           = { :git => 'https://github.com/oscarafuentes/Ana.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
-  s.source_files = 'AnaDependency/Classes/**/*'
+  s.source_files = 'Ana/**/*'
 
   # s.resource_bundles = {
   #   'AnaDependency' => ['AnaDependency/Assets/*.png']
