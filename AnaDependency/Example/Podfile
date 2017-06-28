@@ -1,6 +1,0 @@
-use_frameworks!
-target 'AnaDependency_Tests' do
-  pod 'AnaDependency', :path => '../'
-  
-  
-end
