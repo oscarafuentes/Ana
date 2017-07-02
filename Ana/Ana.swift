@@ -105,12 +105,11 @@ public final class Ana {
         shared.routeStack = shared.routeStack.filter { route -> Bool in
             return toRemove.index(of: route) == nil
         }
-        
-        let parentTemplate = shared.componentStack.last?.template
-        
+                
         shared.routeStack.append(contentsOf: toAdd)
         
         shared.leave(toRemove) {
+            let parentTemplate = shared.componentStack.last?.template
             shared.enter(toAdd, parent: parentTemplate)
         }
         

@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController {
     
-    public override func enter(parent: UIResponder? = nil, completion: @escaping () -> Void) {
+    open override func enter(parent: UIResponder? = nil, completion: @escaping () -> Void) {
         if let parent = parent as? UIViewController {
             parent.present(self, animated: true, completion: completion)
         } else {
@@ -23,6 +23,10 @@ extension UIViewController {
             window?.makeKeyAndVisible()
             completion()
         }
+    }
+    
+    open override func leave(completion: @escaping () -> Void) {
+        self.dismiss(animated: true, completion: completion)
     }
     
 }
