@@ -202,8 +202,8 @@ An example is included in this repository for convenience.
 
 #### UIViewController
 
-* `transitionStyle() -> AViewControllerTransitionStyle`
-    * Returns: The transition style to use when integrating this view controller into the view hierarchy.
+* `transitionStyle() -> Int`
+    * Returns: The transition style to use when integrating this view controller into the hierarchy (`AViewControllerTransitionStyle` provides pre-defined values).
 
 ## Versioning
 
