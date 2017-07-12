@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Ana'
-  s.version          = '0.2.2'
+  s.version          = '0.3.0'
   s.summary          = 'A routing solution for deploying path-oriented iOS applications (conforms to the Clean VIPER Architecture to simplify development).'
 
 # This description is used to generate tags and improve search results.
