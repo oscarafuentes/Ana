@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-public enum AViewControllerTransitionStyle {
+public struct AViewControllerTransitionStyle {
     
-    case navigation
-    case presentation
+    public static let navigation = 1
+    public static let presentation = 2
     
 }
 
@@ -20,7 +20,7 @@ extension UIViewController {
     
     open override func enter(parent: UIResponder? = nil, completion: @escaping () -> Void) {
         if let parent = parent as? UIViewController {
-            if self.transitionStyle() == .navigation {
+            if self.transitionStyle() == AViewControllerTransitionStyle.navigation {
                 // TODO: Handle case where tempalte is a UINavigationController
                 if let navController = parent.navigationController {
                     navController.pushViewController(self, animated: true)
@@ -36,14 +36,14 @@ extension UIViewController {
                 return
             }
             
-            window?.rootViewController = self.transitionStyle() == .navigation ? UINavigationController(rootViewController: self) : self
+            window?.rootViewController = self.transitionStyle() == AViewControllerTransitionStyle.navigation ? UINavigationController(rootViewController: self) : self
             window?.makeKeyAndVisible()
             completion()
         }
     }
     
     open override func leave(completion: @escaping () -> Void) {
-        guard self.transitionStyle() == .navigation else {
+        guard self.transitionStyle() == AViewControllerTransitionStyle.navigation else {
             self.dismiss(animated: true, completion: completion)
             return
         }
@@ -66,8 +66,8 @@ extension UIViewController {
         }
     }
     
-    open func transitionStyle() -> AViewControllerTransitionStyle {
-        return .navigation
+    open func transitionStyle() -> Int {
+        return AViewControllerTransitionStyle.navigation
     }
     
 }

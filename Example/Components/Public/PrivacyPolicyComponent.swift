@@ -11,6 +11,10 @@ import Ana
 
 public class PrivacyPolicyComponent: AComponent {
     
+    public func onRouteBack() {
+        Ana.dispatch(URL(string: "/")!)
+    }
+    
     public override func generateTemplate() -> UIResponder {
         return PrivacyPolicyTemplate()
     }
