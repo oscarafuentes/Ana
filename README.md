@@ -26,6 +26,10 @@ A minimum deployment target of iOS 10.0 is required to integrate this module.
 
 ### Installation
 
+- **CocoaPods**
+
+    `pod 'Ana', :git => 'https://github.com/oscarafuentes/Ana.git'`
+
 - **Integrate as a sub-project**
 
 	Drag the . xcodeproj file into your workspace.
@@ -193,6 +197,13 @@ An example is included in this repository for convenience.
 
 * `onInit()` - Post-initialization function to avoid constructor logic.
 * `onDestroy()` - Pre-destruction function to cleanup resources.
+
+### Extensions
+
+#### UIViewController
+
+* `transitionStyle() -> Int`
+    * Returns: The transition style to use when integrating this view controller into the hierarchy (`AViewControllerTransitionStyle` provides pre-defined values).
 
 ## Versioning
 

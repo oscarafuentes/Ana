@@ -8,7 +8,16 @@
 
 import Foundation
 import UIKit
+import Ana
 
 public class AboutTemplate: UIViewController {
+    
+    @IBAction func onTapBack() {
+        guard let responder = self.component as? AboutComponent else {
+            return
+        }
+        
+        responder.onRouteBack()
+    }
     
 }

@@ -8,7 +8,20 @@
 
 import Foundation
 import UIKit
+import Ana
 
 public class PrivacyPolicyTemplate: UIViewController {
+    
+    @IBAction func onTapBack() {
+        guard let responder = self.component as? PrivacyPolicyComponent else {
+            return
+        }
+        
+        responder.onRouteBack()
+    }
+    
+    public override func transitionStyle() -> Int {
+        return AViewControllerTransitionStyle.presentation
+    }
     
 }
