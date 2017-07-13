@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Example.xcscheme</key>
+		<key>Example.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
-		</dict>
-		<key>Kerabyte.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>KerabyteUITests.xcscheme</key>
 		<dict>
