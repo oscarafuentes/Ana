@@ -45,15 +45,7 @@ public final class Ana {
      The active route.
      */
     
-    private var activeRoute: ARoute? {
-        willSet {
-//            self.activeRoute?.active = false
-        }
-        
-        didSet {
-//            self.activeRoute?.active = true
-        }
-    }
+    private var activeRoute: ARoute?
     
     private var historyStack: [URL] = []
     
@@ -95,7 +87,7 @@ public final class Ana {
         }
         
         let toRemove = shared.routeStack.filter { route -> Bool in
-            return routeStack.index(of: route) == nil
+            return shared.routeStack.index(of: route) == nil
         }
         
         let toAdd = routeStack.filter { route -> Bool in
