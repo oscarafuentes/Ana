@@ -87,7 +87,7 @@ public final class Ana {
         }
         
         let toRemove = shared.routeStack.filter { route -> Bool in
-            return shared.routeStack.index(of: route) == nil
+            return routeStack.index(of: route) == nil
         }
         
         let toAdd = routeStack.filter { route -> Bool in
@@ -97,7 +97,7 @@ public final class Ana {
         shared.routeStack = shared.routeStack.filter { route -> Bool in
             return toRemove.index(of: route) == nil
         }
-                
+        
         shared.routeStack.append(contentsOf: toAdd)
         
         shared.leave(toRemove) {
@@ -124,9 +124,7 @@ public final class Ana {
         
         var duplicate = components.map { component -> String in
             return component.replacingOccurrences(of: "/", with: "")
-        }
-        
-        duplicate = duplicate.filter { component -> Bool in
+        }.filter { component -> Bool in
             return !component.isEmpty
         }
         
@@ -162,23 +160,21 @@ public final class Ana {
         } else {
             returnValue = [route]
             
-            if returnValue != nil {
-                for subRoute in subRoutes {
-                    let subRoutePath = subRoute.path?.replacingOccurrences(of: "/", with: "").lowercased()
-                    
-                    if duplicate.count > 0 {
-                        if subRoutePath == duplicate[0] {
-                            childRoutes = self.generate(duplicate, route: subRoute)
-                        }
-                    }
-                    
-                    if subRoutePath == ARoutePredefined.root.rawValue || subRoutePath == ARoutePredefined.wildcard.rawValue {
+            for subRoute in subRoutes {
+                let subRoutePath = subRoute.path?.replacingOccurrences(of: "/", with: "").lowercased()
+                
+                if duplicate.count > 0 {
+                    if subRoutePath == duplicate[0] {
                         childRoutes = self.generate(duplicate, route: subRoute)
                     }
-                    
-                    if childRoutes != nil {
-                        break
-                    }
+                }
+                
+                if subRoutePath == ARoutePredefined.root.rawValue || subRoutePath == ARoutePredefined.wildcard.rawValue {
+                    childRoutes = self.generate(duplicate, route: subRoute)
+                }
+                
+                if childRoutes != nil {
+                    break
                 }
             }
         }
