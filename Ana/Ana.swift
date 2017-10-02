@@ -45,15 +45,7 @@ public final class Ana {
      The active route.
      */
     
-    private var activeRoute: ARoute? {
-        willSet {
-//            self.activeRoute?.active = false
-        }
-        
-        didSet {
-//            self.activeRoute?.active = true
-        }
-    }
+    private var activeRoute: ARoute?
     
     private var historyStack: [URL] = []
     
@@ -105,7 +97,7 @@ public final class Ana {
         shared.routeStack = shared.routeStack.filter { route -> Bool in
             return toRemove.index(of: route) == nil
         }
-                
+        
         shared.routeStack.append(contentsOf: toAdd)
         
         shared.leave(toRemove) {
@@ -132,9 +124,7 @@ public final class Ana {
         
         var duplicate = components.map { component -> String in
             return component.replacingOccurrences(of: "/", with: "")
-        }
-        
-        duplicate = duplicate.filter { component -> Bool in
+        }.filter { component -> Bool in
             return !component.isEmpty
         }
         
@@ -170,23 +160,21 @@ public final class Ana {
         } else {
             returnValue = [route]
             
-            if returnValue != nil {
-                for subRoute in subRoutes {
-                    let subRoutePath = subRoute.path?.replacingOccurrences(of: "/", with: "").lowercased()
-                    
-                    if duplicate.count > 0 {
-                        if subRoutePath == duplicate[0] {
-                            childRoutes = self.generate(duplicate, route: subRoute)
-                        }
-                    }
-                    
-                    if subRoutePath == ARoutePredefined.root.rawValue || subRoutePath == ARoutePredefined.wildcard.rawValue {
+            for subRoute in subRoutes {
+                let subRoutePath = subRoute.path?.replacingOccurrences(of: "/", with: "").lowercased()
+                
+                if duplicate.count > 0 {
+                    if subRoutePath == duplicate[0] {
                         childRoutes = self.generate(duplicate, route: subRoute)
                     }
-                    
-                    if childRoutes != nil {
-                        break
-                    }
+                }
+                
+                if subRoutePath == ARoutePredefined.root.rawValue || subRoutePath == ARoutePredefined.wildcard.rawValue {
+                    childRoutes = self.generate(duplicate, route: subRoute)
+                }
+                
+                if childRoutes != nil {
+                    break
                 }
             }
         }
@@ -206,16 +194,10 @@ public final class Ana {
         
         let component = first.generateComponent()
         component.template.onInit()
-        
         component.template.enter(parent: parent) {
-            var duplicate = routes
-            duplicate.removeFirst()
-            let subParentTemplate = self.componentStack.last?.template
-            
-            self.enter(duplicate, parent: subParentTemplate, completion: completion)
+            self.componentStack.append(component)
+            self.enter(Array(routes.dropFirst()), parent: self.componentStack.last?.template, completion: completion)
         }
-        
-        self.componentStack.append(component)
     }
     
     private func leave(_ routes: [ARoute], completion: (() -> Void)? = nil) {
@@ -226,11 +208,8 @@ public final class Ana {
         
         let component = self.componentStack.removeLast()
         component.onDestroy()
-        
         component.template.leave {
-            var duplicate = routes
-            duplicate.removeLast()
-            self.leave(duplicate, completion: completion)
+            self.leave(Array(routes.dropLast()), completion: completion)
         }
     }
     
