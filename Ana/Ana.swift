@@ -194,16 +194,10 @@ public final class Ana {
         
         let component = first.generateComponent()
         component.template.onInit()
-        
         component.template.enter(parent: parent) {
-            var duplicate = routes
-            duplicate.removeFirst()
-            let subParentTemplate = self.componentStack.last?.template
-            
-            self.enter(duplicate, parent: subParentTemplate, completion: completion)
+            self.componentStack.append(component)
+            self.enter(Array(routes.dropFirst()), parent: self.componentStack.last?.template, completion: completion)
         }
-        
-        self.componentStack.append(component)
     }
     
     private func leave(_ routes: [ARoute], completion: (() -> Void)? = nil) {
@@ -214,11 +208,8 @@ public final class Ana {
         
         let component = self.componentStack.removeLast()
         component.onDestroy()
-        
         component.template.leave {
-            var duplicate = routes
-            duplicate.removeLast()
-            self.leave(duplicate, completion: completion)
+            self.leave(Array(routes.dropLast()), completion: completion)
         }
     }
     
