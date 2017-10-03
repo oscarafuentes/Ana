@@ -18,7 +18,7 @@ public struct AViewControllerTransitionStyle {
 
 extension UIViewController {
     
-    open override func enter(parent: UIResponder? = nil, completion: @escaping () -> Void) {
+    open override func enter(parent: UIResponder? = nil, animated: Bool = true, completion: @escaping () -> Void) {
         if let parent = parent as? UIViewController {
             if self.transitionStyle() == AViewControllerTransitionStyle.navigation {
                 // TODO: Handle case where tempalte is a UINavigationController
@@ -26,10 +26,10 @@ extension UIViewController {
                     navController.pushViewController(self, animated: true)
                     completion()
                 } else {
-                    parent.present(UINavigationController(rootViewController: self), animated: true, completion: completion)
+                    parent.present(UINavigationController(rootViewController: self), animated: animated, completion: completion)
                 }
             } else {
-                parent.present(self, animated: true, completion: completion)
+                parent.present(self, animated: animated, completion: completion)
             }
         } else {
             guard let window = UIApplication.shared.delegate?.window else {
