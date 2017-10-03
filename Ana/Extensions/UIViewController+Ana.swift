@@ -18,12 +18,12 @@ public struct AViewControllerTransitionStyle {
 
 extension UIViewController {
     
-    open override func enter(parent: UIResponder? = nil, animated: Bool = true, completion: @escaping () -> Void) {
+    open override func enter(_ parent: UIResponder? = nil, animated: Bool = true, completion: @escaping () -> Void) {
         if let parent = parent as? UIViewController {
             if self.transitionStyle() == AViewControllerTransitionStyle.navigation {
                 // TODO: Handle case where tempalte is a UINavigationController
                 if let navController = parent.navigationController {
-                    navController.pushViewController(self, animated: true)
+                    navController.pushViewController(self, animated: animated)
                     completion()
                 } else {
                     parent.present(UINavigationController(rootViewController: self), animated: animated, completion: completion)
@@ -42,9 +42,9 @@ extension UIViewController {
         }
     }
     
-    open override func leave(completion: @escaping () -> Void) {
+    open override func leave(_ animated: Bool = true, completion: @escaping () -> Void) {
         guard self.transitionStyle() == AViewControllerTransitionStyle.navigation else {
-            self.dismiss(animated: true, completion: completion)
+            self.dismiss(animated: animated, completion: completion)
             return
         }
         

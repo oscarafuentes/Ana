@@ -194,7 +194,7 @@ public final class Ana {
         
         let component = first.generateComponent()
         component.template.onInit()
-        component.template.enter(parent: parent) {
+        component.template.enter(parent) {
             self.componentStack.append(component)
             self.enter(Array(routes.dropFirst()), parent: self.componentStack.last?.template, completion: completion)
         }
