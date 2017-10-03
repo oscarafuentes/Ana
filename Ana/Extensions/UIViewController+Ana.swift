@@ -59,9 +59,9 @@ extension UIViewController {
         }
         
         if index == 0 {
-            navController.dismiss(animated: true, completion: completion)
+            navController.dismiss(animated: animated, completion: completion)
         } else {
-            navController.popToViewController(navController.viewControllers[index - 1], animated: true)
+            navController.popToViewController(navController.viewControllers[index - 1], animated: animated)
             completion()
         }
     }
