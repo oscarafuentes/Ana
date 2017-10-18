@@ -66,7 +66,7 @@ extension UIViewController {
         }
     }
     
-    open func transitionStyle() -> Int {
+    @objc open func transitionStyle() -> Int {
         return AViewControllerTransitionStyle.navigation
     }
     
