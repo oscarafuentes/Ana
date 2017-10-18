@@ -65,11 +65,11 @@ extension UIResponder {
         }
     }
     
-    open func enter(parent: UIResponder? = nil, completion: @escaping () -> Void) {
+    open func enter(_ parent: UIResponder? = nil, animated: Bool = true, completion: @escaping () -> Void) {
         completion()
     }
     
-    open func leave(completion: @escaping () -> Void) {
+    open func leave(_ animated: Bool = true, completion: @escaping () -> Void) {
         completion()
     }
     
